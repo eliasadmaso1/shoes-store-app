@@ -1,0 +1,148 @@
+
+.productContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+}
+    
+
+
+.shoe-images{
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 35px;
+    justify-content: start;
+}
+
+.shoe-images .img{
+    margin-left: 15px;
+}
+.shoe-images img{
+    margin-top: -45%;
+}
+.shoe-images .img2{
+    margin-top: 33%;
+    margin-left: -61.6%;
+}
+.shoe-images .img3{
+    margin-top: 33%;
+    margin-left:0.8%;;
+}
+
+.shoe-details{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+    margin-bottom: 58%;
+
+}
+
+.shoe-details p{
+    margin-right: 40px;
+}
+
+
+
+h1{
+    color: black;
+}
+
+.materialIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addButton{
+    width:250px;
+    padding:18px 24px;
+    border-radius:30px;
+    color:white;
+    background:black;
+    font-size:17px;
+    margin-top:25px;
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
+
+.addButton:hover{
+    opacity: 0.5;
+}
+
+.backButton{
+    width:200px;
+    padding:15px 20px;
+    border-radius: 15px;
+    color:rgb(101, 158, 96);
+    background: white;
+    font-size:17px;
+    margin-top:25px;
+    margin-bottom: 25px;
+
+}
+
+.favouritesButton{
+    width:250px;
+    padding:18px 24px;
+    border-radius:30px;
+    color:black;
+    background:rgb(246 246 246);
+    font-size:17px;
+    margin-top:25px;
+    margin-bottom: 25px;
+    transition: 0.5s;
+
+}
+
+.favouritesButton:hover{
+    opacity: 0.5;
+    background-color: black;
+    color: white;
+
+}
+
+.accessories-images{
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 35px;
+    justify-content: start;
+}
+.accessories-images .img1{
+    margin-top: -42%;
+}
+
+.accessories-images .img2{
+    margin-top: -42%;
+    margin-left: 3%;
+
+
+}
+
+.accessories-details{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+    margin-bottom: 58%;
+
+}
+
+
+
+
+
+

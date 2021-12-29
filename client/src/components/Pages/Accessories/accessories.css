@@ -1,0 +1,24 @@
+.accessories-Container{
+    margin-top: 85px;
+}
+
+.accessories-btn{
+    display: flex;
+    justify-content: center;
+
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.background img{
+    transition: 0.5s;
+}
+
+.background img:hover{
+    opacity: 0.5;
+}

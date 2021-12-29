@@ -1,0 +1,36 @@
+.mensDiv{
+    height: 850px;
+    width: 100vw;
+    margin-top: 30px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.mensDiv .btn1{
+    position: absolute;
+    margin-top: 41%;
+    margin-right: 54%;
+    border-radius: 27px;
+    background: white;
+    width: 102px;
+    height: 48px;
+    font-size: 18px;
+    border: solid 0;
+}
+
+.mensDiv .btn2{
+    position: absolute;
+    margin-top: 41%;
+    margin-left: 45%;
+    border-radius: 27px;
+    background: white;
+    width: 102px;
+    height: 48px;
+    font-size: 18px;
+    border: solid 0;
+}
+

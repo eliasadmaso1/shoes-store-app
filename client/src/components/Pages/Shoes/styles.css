@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url("https://footwearnews.com/wp-content/uploads/2018/11/nike-friends-and-family-sale.jpg?w=700&h=437&crop=1");
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+
+}
+
+.back{
+    color: black;
+    border: solid 2px white;
+    margin-top: 5%;
+    margin-left: 1%;
+    background-color: black;
+    width: 50px;
+    padding: 4px;
+    padding-left: 6px;
+
+
+}
+
+
+
+.light{
+background-color: white;
+}
+.dark{
+background-color: black;
+}
+
+.mightAlso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+    border-bottom: solid 0.5px rgb(230, 230, 230);
+    padding: 30px;
+
+}
+
+.mightAlso .img{
+    margin-left: 15px;
+}
+
+.mightAlso .img h4{
+    color: black;
+
+}
+
+.mightAlso .img h5{
+    color:rgb(117, 117, 117);
+    
+}
+
+.mightAlso .img h6{
+    color: rgb(117, 117, 117);
+    
+}

@@ -1,0 +1,35 @@
+.womens-div{
+    height: 850px;
+    width: 100vw;
+    background-repeat: no-repeat;
+    margin-left: 60px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.womens-div .btn1{
+    position: absolute;
+    margin-top: 41%;
+    margin-right: 54%;
+    border-radius: 27px;
+    background: white;
+    width: 102px;
+    height: 48px;
+    font-size: 18px;
+    border: solid 0;
+}
+
+.womens-div .btn2{
+    position: absolute;
+    margin-top: 41%;
+    margin-left: 45%;
+    border-radius: 27px;
+    background: white;
+    width: 102px;
+    height: 48px;
+    font-size: 18px;
+    border: solid 0;
+}

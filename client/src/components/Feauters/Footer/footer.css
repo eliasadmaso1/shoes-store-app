@@ -1,0 +1,37 @@
+.footerDiv{
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: solid 5px white;
+    border-radius: 10px;
+
+}
+
+a{
+    margin: 5px;
+   
+}
+
+.subFooterDiv{
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    
+
+}
+
+.subFooterDiv li{
+    margin-right: 10px;
+    color: gray;
+    list-style-type: none
+}
+
+

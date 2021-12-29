@@ -1,0 +1,36 @@
+.light{
+    background-color: white;
+
+}
+
+.dark{
+    background-color: black;
+
+}
+.homeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.homeSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.homeSection img{
+    transition: 0.5s;
+}
+.homeSection img:hover{
+    opacity: 0.5;
+}
+
+
+
