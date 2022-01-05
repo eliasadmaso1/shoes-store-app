@@ -26,7 +26,7 @@ export default function Navbar() {
 
   const logOut = () => {
     localStorage.removeItem("token");
-    window.location.replace("/");
+    window.location.replace(process.env.NODE_ENV === 'production' ? "/shoes-store-app/":  "/");
   };
 
   useEffect(() => {
