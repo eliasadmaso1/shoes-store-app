@@ -25,7 +25,7 @@ const LoginForm = () => {
       .then((res) => {
         if (res.data) {
           localStorage.setItem("token", res.data);
-          window.location.replace("/");
+          window.location.replace(process.env.NODE_ENV === 'production' ? "/shoes-store-app/":  "/");
         } else {
           setError("Incorrect Email or Password , Resgister below");
         }
