@@ -61,7 +61,7 @@ const register = ()=>{
   },[values.password])
 
   return (
-    <form class="login-form"  method="POST">
+    <div class="login-form" >
       <div class="login-form__content">
         <div class="login-form__header">Registration</div>
         <Input type="text" name="firstName" placeholder="First Name"  handleChange={handleChange}/>
@@ -76,7 +76,7 @@ const register = ()=>{
         <div class="login-form__links">
         </div>
       </div>
-    </form>
+     </div>
   );
 };
 
