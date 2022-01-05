@@ -19,11 +19,11 @@ function App() {
 
   return (
     <ContextProvider value={{ user }}>
-    <Router>
-      <Navbar />
-      <Route />
-    </Router>
-    // </ContextProvider>
+      <Router basename={process.env.NODE_ENV === 'production' ? 'https://eliasadmaso1.github.io/shoes-store-app/' : '/'}>
+        <Navbar />
+        <Route />
+      </Router>
+    </ContextProvider>
   );
 }
 
