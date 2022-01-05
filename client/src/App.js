@@ -19,7 +19,7 @@ function App() {
 
   return (
     <ContextProvider value={{ user }}>
-      <Router basename={process.env.NODE_ENV === 'production' ? 'https://eliasadmaso1.github.io/shoes-store-app/' : '/'}>
+      <Router basename={process.env.NODE_ENV === 'production' ? '/shoes-store-app/' : '/'}>
         <Navbar />
         <Route />
       </Router>
