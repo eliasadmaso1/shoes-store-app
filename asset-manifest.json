@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/shoes-store-app/static/css/main.387374bd.chunk.css",
-    "main.js": "/shoes-store-app/static/js/main.c5b6d42e.chunk.js",
-    "main.js.map": "/shoes-store-app/static/js/main.c5b6d42e.chunk.js.map",
+    "main.css": "/shoes-store-app/static/css/main.7e01bff0.chunk.css",
+    "main.js": "/shoes-store-app/static/js/main.014ae9bf.chunk.js",
+    "main.js.map": "/shoes-store-app/static/js/main.014ae9bf.chunk.js.map",
     "runtime-main.js": "/shoes-store-app/static/js/runtime-main.6c5a8d97.js",
     "runtime-main.js.map": "/shoes-store-app/static/js/runtime-main.6c5a8d97.js.map",
     "static/css/2.01c51683.chunk.css": "/shoes-store-app/static/css/2.01c51683.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.1a7ee17a.chunk.js.map": "/shoes-store-app/static/js/3.1a7ee17a.chunk.js.map",
     "index.html": "/shoes-store-app/index.html",
     "static/css/2.01c51683.chunk.css.map": "/shoes-store-app/static/css/2.01c51683.chunk.css.map",
-    "static/css/main.387374bd.chunk.css.map": "/shoes-store-app/static/css/main.387374bd.chunk.css.map",
+    "static/css/main.7e01bff0.chunk.css.map": "/shoes-store-app/static/css/main.7e01bff0.chunk.css.map",
     "static/js/2.96a60704.chunk.js.LICENSE.txt": "/shoes-store-app/static/js/2.96a60704.chunk.js.LICENSE.txt",
     "static/media/jordan.af2ea5a9.png": "/shoes-store-app/static/media/jordan.af2ea5a9.png",
     "static/media/nike.80761db6.png": "/shoes-store-app/static/media/nike.80761db6.png",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.6c5a8d97.js",
     "static/css/2.01c51683.chunk.css",
     "static/js/2.96a60704.chunk.js",
-    "static/css/main.387374bd.chunk.css",
-    "static/js/main.c5b6d42e.chunk.js"
+    "static/css/main.7e01bff0.chunk.css",
+    "static/js/main.014ae9bf.chunk.js"
   ]
 }
