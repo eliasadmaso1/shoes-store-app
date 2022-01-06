@@ -5,6 +5,7 @@ import {
   IconButton,
   Badge,
   Typography,
+  useMediaQuery
 } from "@material-ui/core";
 import useStyles from "./Styles";
 import { Link } from "react-router-dom";
@@ -20,9 +21,10 @@ import {
 } from "@ant-design/icons";
 
 export default function Navbar() {
-  const { toggleCart, user } = useMyContext();
+  const {  user } = useMyContext();
   const [products, setProducts] = useState([]);
   const userName = user?.firstName || "Member";
+  const media = useMediaQuery('(max-width:990px)')
 
   const logOut = () => {
     localStorage.removeItem("token");
@@ -40,14 +42,14 @@ export default function Navbar() {
 
   const classes = useStyles();
   return (
-    <AppBar position="fixed" className={classes.appBar} color="inherit">
+    <AppBar position="fixed" className={media ? classes.appBar1 : classes.appBar} color="inherit" >
       <Toolbar>
         <img src={Nike} width="40px" />
 
-        <Typography variant="h7" className={classes.title} color="inherit">
+        <Typography variant="h7" className={media ? classes.title1 : classes.title} color="inherit">
           <Link to="/" style={{ color: "black", textDecoration: "none",fontSize:"17px" }}>
             {" "}
-            Shoes And Clothing
+            Home
           </Link>
           <Link
             to="/Accessories"
@@ -66,12 +68,13 @@ export default function Navbar() {
 
         <div className={classes.grow} />
         <div className={classes.button}>
-          <IconButton>
+          {media ? null :  <IconButton>
             <Link
               to="/Login"
               style={{ color: "black", textDecoration: "none",fontWeight:"bold",fontSize:"18px" }}
             >
-              {user ? `Hello, ${userName}` : "Login"}
+              
+              {user ? `Hello, ${userName}` : null}
               <UserOutlined
                 style={{
                   fontSize: "22px",
@@ -80,7 +83,8 @@ export default function Navbar() {
                 }}
               />
             </Link>
-          </IconButton>
+          </IconButton>}
+         
 
           {user ? (
             <IconButton aria-label="show cart items" color="inherit">

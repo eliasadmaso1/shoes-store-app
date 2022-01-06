@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@material-ui/core';
 import {makeStyles,alpha, fade} from '@material-ui/core/styles';
 
 const drawerWidth = 0;
@@ -12,7 +13,26 @@ export default makeStyles((theme)=> ({
             marginLeft:drawerWidth,
         },
     },
+    appBar1:{
+        boxShadow:'none',
+        backgroundColor:'white',
+        display: "flex",
+        flexDirection:"column"
+        
+    },
     navbar:{
+        marginTop:"15px",
+        boxShadow:'none',
+        backgroundColor:'white',
+        borderBottom:'1px solid rgba(0, 0, 0, 0.12)',
+        [theme.breakpoints.up('sm')]: {
+            width: `calc(100% - ${drawerWidth}px)`,
+            marginLeft:drawerWidth,
+        },
+        
+
+    },
+    navbar1:{
         marginTop:"15px",
         boxShadow:'none',
         backgroundColor:'white',
@@ -34,6 +54,20 @@ export default makeStyles((theme)=> ({
         justifyContent:'space-evenly',
         marginLeft:'28.5%',
         background: "rgb(246 246 246)",
+        
+       
+        
+    },
+    title1:{
+        flexGrow:1,
+        alignItems:'center',
+        display: 'flex',
+        textDecoration:'none',
+        color:'green',
+        justifyContent:'center',
+        marginLeft:"35px",
+        background: "rgb(246 246 246)",
+        justifyContent:"space-evenly"
         
        
         
@@ -89,6 +123,8 @@ export default makeStyles((theme)=> ({
         },
     },
 }));
+
+
    
   
  
