@@ -71,4 +71,34 @@
 
 
     }
+
+  .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.icons .link1{
+    margin-left: -41%;
+    margin-top: 12%;
+}
+    
+}
+.icons .link2{
+    margin-left: -133%;
+    
+    
+}
+.icons .link3{
+    margin-left: -123%;
+    font-size: 22px;
+    margin-top: 23%;
+    
+    
+}
+  
+
+  .icons{
+      display: flex;
+      flex-direction: row;
   }
