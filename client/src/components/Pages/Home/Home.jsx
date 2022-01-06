@@ -3,19 +3,17 @@ import Navbar from "../../Feauters/NavBar/Navbar";
 import nikeBack from "../../../images/logos/nikeWebBackground.jpeg";
 import { Link } from "react-router-dom";
 import Footer from "../../Feauters/Footer/Footer";
-import { useMediaQuery } from 'react-responsive'
 
 
 export default function Home() {
 
-  const mobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   return (
     <>
       <Navbar />
       <div className={"light"}>
-        <div theme className={mobile ? "homeContainer-mobile" : "homeContainer"}>
-          <img src={nikeBack} style={mobile ? { marginTop: "45px", width: "100%" } : {marginTop: "5px", width: "100%"}} />
+        <div theme className="homeContainer">
+          <img src={nikeBack}  />
         </div>
         <div className="homeSection">
           <Link to="/Womens">

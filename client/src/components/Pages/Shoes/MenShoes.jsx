@@ -6,12 +6,10 @@ import Select from '../../Feauters/Select';
 import TextField from '@material-ui/core/TextField';
 import {Link} from 'react-router-dom';
 import {getMenShoes} from '../../../Service/productService';
-import { useMediaQuery } from 'react-responsive'
 
 
 export default function Shoes() {
 
-  const mobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   const [Shoes, setShoes] = useState([]);
 
@@ -42,8 +40,7 @@ export default function Shoes() {
     <main style={{ marginTop: "85px" } }>
       <Select label="Shoes by price" value={selectedPrice} setValue={setSelectedPrice} options={["All", "50$", "100$", "150$", "200$", "250$", "300$", "350$", "400$"]} />
       <TextField onChange={(e)=>setShoesName(e.target.value)} id="standard-basic" label="Search" />
-      <Grid container spacing={15}               style={mobile ? { flexDirection: "column" }:{ flexDirection: "row" } }
->
+      <Grid container spacing={15} className="shoes-container">
 
         {filteredShoes.map((product) => (
           <Grid item key={product._id} md={3}>
