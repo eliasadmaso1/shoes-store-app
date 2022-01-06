@@ -45,7 +45,7 @@ export default function Navbar() {
     <AppBar position="fixed" className={media ? classes.appBar1 : classes.appBar} color="inherit" >
       <Toolbar>
         <img src={Nike} width="40px" />
-
+       
         <Typography variant="h7" className={media ? classes.title1 : classes.title} color="inherit">
           <Link to="/" style={{ color: "black", textDecoration: "none",fontSize:"17px" }}>
             {" "}
@@ -64,6 +64,9 @@ export default function Navbar() {
           <Link to="/About" style={{ color: "black", textDecoration: "none",fontSize:"17px" }}>
             About
           </Link>
+          {media ? <Link to="/Login" style={{ color: "black", textDecoration: "none",fontSize:"17px" }}>
+            Login
+          </Link>:null}
         </Typography>
 
         <div className={classes.grow} />
