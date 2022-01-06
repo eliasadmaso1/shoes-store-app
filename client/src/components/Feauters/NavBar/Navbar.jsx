@@ -5,7 +5,6 @@ import {
   IconButton,
   Badge,
   Typography,
-  useMediaQuery
 } from "@material-ui/core";
 import useStyles from "./Styles";
 import { Link } from "react-router-dom";
@@ -19,12 +18,13 @@ import {
   UserDeleteOutlined,
   HeartOutlined,
 } from "@ant-design/icons";
+import {useMediaQuery} from 'react-responsive'
 
 export default function Navbar() {
   const {  user } = useMyContext();
   const [products, setProducts] = useState([]);
   const userName = user?.firstName || "Member";
-  const media = useMediaQuery('(max-width:990px)')
+  const media = useMediaQuery({ query: '(max-width: 1224px)' })
 
   const logOut = () => {
     localStorage.removeItem("token");

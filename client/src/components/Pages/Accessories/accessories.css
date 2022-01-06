@@ -1,9 +1,7 @@
 .accessories-Container{
     margin-top: 85px;
 }
-.accessories-Container-media{
 
-}
 
 .accessories-btn{
     display: flex;
@@ -15,6 +13,7 @@
     display: flex;
     justify-content: center;
     margin-top: 20%;
+    
 
 }
 

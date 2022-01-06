@@ -3,8 +3,12 @@ import { Grid } from "@material-ui/core";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {getAccessories} from '../../../Service/productService';
+import { useMediaQuery } from 'react-responsive'
+
 
 export default function Bags() {
+  const mobile = useMediaQuery({ query: '(max-width: 1224px)' })
+
 
     const [accessories,setAccessories] = useState([]);
 
@@ -17,7 +21,7 @@ export default function Bags() {
 
 
 
-  return (<main style={{ marginTop: "85px" }}>
+  return (<main style={mobile? { marginTop: "85px" } : { marginTop: "85px",display:"flex",flexDirection:"column"}}>
   <Grid container spacing={15}>
 
     {accessories.map((product) => (
