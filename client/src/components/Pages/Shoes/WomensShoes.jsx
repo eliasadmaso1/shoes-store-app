@@ -7,8 +7,13 @@ import Select from "../../Feauters/Select";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 import { getServerBaseUrl } from "../../../Service/utils";
+import { useMediaQuery } from 'react-responsive'
+
 
 export default function Shoes() {
+
+  const mobile = useMediaQuery({ query: '(max-width: 1224px)' })
+
   const [Shoes, setShoes] = useState([]);
 
   useEffect(() => {
@@ -50,7 +55,7 @@ export default function Shoes() {
         id="standard-basic"
         label="Search"
       />
-      <Grid container spacing={15}>
+      <Grid container spacing={15} style={mobile ? {display:"flex",flexDirection:"column"} : {display:"flex",flexDirection:"row"}}>
         {filteredShoes.map((product) => (
           <Grid item key={product._id} md={3}>
             <Link to={`/womenShoe/${product._id}`}>
