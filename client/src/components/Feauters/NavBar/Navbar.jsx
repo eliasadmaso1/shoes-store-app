@@ -90,7 +90,7 @@ export default function Navbar() {
             <IconButton aria-label="show cart items" color="inherit">
               <UserDeleteOutlined
                 onClick={logOut}
-                style={{ marginTop: "2px", fontSize: "24px" }}
+                style={{marginTop: "2px", fontSize: "24px"}}
               />{" "}
             </IconButton>
           ) : null}
@@ -101,7 +101,7 @@ export default function Navbar() {
                 <HeartOutlined
                   style={{
                     fontSize: "23px",
-                    marginTop: "5px",
+                    marginTop: "-35px",
                     marginLeft: "5px",
                   }}
                 />

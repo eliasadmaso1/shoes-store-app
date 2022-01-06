@@ -1,10 +1,20 @@
 .accessories-Container{
     margin-top: 85px;
 }
+.accessories-Container-media{
+
+}
 
 .accessories-btn{
     display: flex;
     justify-content: center;
+
+}
+
+.accessories-btn-media{
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
 
 }
 
@@ -22,3 +32,8 @@
 .background img:hover{
     opacity: 0.5;
 }
+
+.background-media img{
+    width: 600px;
+}
+
