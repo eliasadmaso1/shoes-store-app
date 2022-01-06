@@ -6,7 +6,7 @@ import {
   Badge,
   Typography,
 } from "@material-ui/core";
-import useStyles from "./Styles";
+import './Navbar.css';
 import { Link } from "react-router-dom";
 import Nike from "../../../images/logos/nike.png";
 import { getCartProducts } from "../../../Service/cart-service";
@@ -18,13 +18,11 @@ import {
   UserDeleteOutlined,
   HeartOutlined,
 } from "@ant-design/icons";
-import {useMediaQuery} from 'react-responsive'
 
 export default function Navbar() {
   const {  user } = useMyContext();
   const [products, setProducts] = useState([]);
   const userName = user?.firstName || "Member";
-  const media = useMediaQuery({ query: '(max-width: 1224px)' })
 
   const logOut = () => {
     localStorage.removeItem("token");
@@ -40,38 +38,35 @@ export default function Navbar() {
     }
   }, [user]);
 
-  const classes = useStyles();
   return (
-    <AppBar position="fixed" className={media ? classes.appBar1 : classes.appBar} color="inherit" >
+    <AppBar position="fixed" className="appBar" color="inherit" >
       <Toolbar>
         <img src={Nike} width="40px" />
        
-        <Typography variant="h7" className={media ? classes.title1 : classes.title} color="inherit">
-          <Link to="/" style={{ color: "black", textDecoration: "none",fontSize:"17px" }}>
+       <Typography variant="h7" className="title" color="inherit">
+          <Link to="/"  className="link">
             {" "}
             Home
           </Link>
           <Link
             to="/Accessories"
-            style={{ color: "black", textDecoration: "none" ,fontSize:"17px"}}
+            className="link"
           >
             Accessories
           </Link>
-          <Link to="/Contact" style={{ color: "black", textDecoration: "none",fontSize:"17px" }}>
+          <Link to="/Contact"  className="link">
             Contact
           </Link>
 
-          <Link to="/About" style={{ color: "black", textDecoration: "none",fontSize:"17px" }}>
+          <Link to="/About"  className="link">
             About
           </Link>
-          {media ? <Link to="/Login" style={{ color: "black", textDecoration: "none",fontSize:"17px" }}>
-            Login
-          </Link>:null}
+          
         </Typography>
+        
 
-        <div className={classes.grow} />
-        <div className={classes.button}>
-          {media ? null :  <IconButton>
+        <div >
+      <IconButton>
             <Link
               to="/Login"
               style={{ color: "black", textDecoration: "none",fontWeight:"bold",fontSize:"18px" }}
@@ -86,7 +81,7 @@ export default function Navbar() {
                 }}
               />
             </Link>
-          </IconButton>}
+          </IconButton>
          
 
           {user ? (
