@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/shoes-store-app/static/css/main.6a394f27.chunk.css",
-    "main.js": "/shoes-store-app/static/js/main.313ee212.chunk.js",
-    "main.js.map": "/shoes-store-app/static/js/main.313ee212.chunk.js.map",
-    "runtime-main.js": "/shoes-store-app/static/js/runtime-main.50c26131.js",
-    "runtime-main.js.map": "/shoes-store-app/static/js/runtime-main.50c26131.js.map",
+    "main.css": "/shoes-store-app/static/css/main.4420ebab.chunk.css",
+    "main.js": "/shoes-store-app/static/js/main.16119d3f.chunk.js",
+    "main.js.map": "/shoes-store-app/static/js/main.16119d3f.chunk.js.map",
+    "runtime-main.js": "/shoes-store-app/static/js/runtime-main.6c5a8d97.js",
+    "runtime-main.js.map": "/shoes-store-app/static/js/runtime-main.6c5a8d97.js.map",
     "static/css/2.01c51683.chunk.css": "/shoes-store-app/static/css/2.01c51683.chunk.css",
-    "static/js/2.c5271773.chunk.js": "/shoes-store-app/static/js/2.c5271773.chunk.js",
-    "static/js/2.c5271773.chunk.js.map": "/shoes-store-app/static/js/2.c5271773.chunk.js.map",
-    "static/js/3.292beca7.chunk.js": "/shoes-store-app/static/js/3.292beca7.chunk.js",
-    "static/js/3.292beca7.chunk.js.map": "/shoes-store-app/static/js/3.292beca7.chunk.js.map",
+    "static/js/2.96a60704.chunk.js": "/shoes-store-app/static/js/2.96a60704.chunk.js",
+    "static/js/2.96a60704.chunk.js.map": "/shoes-store-app/static/js/2.96a60704.chunk.js.map",
+    "static/js/3.1a7ee17a.chunk.js": "/shoes-store-app/static/js/3.1a7ee17a.chunk.js",
+    "static/js/3.1a7ee17a.chunk.js.map": "/shoes-store-app/static/js/3.1a7ee17a.chunk.js.map",
     "index.html": "/shoes-store-app/index.html",
     "static/css/2.01c51683.chunk.css.map": "/shoes-store-app/static/css/2.01c51683.chunk.css.map",
-    "static/css/main.6a394f27.chunk.css.map": "/shoes-store-app/static/css/main.6a394f27.chunk.css.map",
-    "static/js/2.c5271773.chunk.js.LICENSE.txt": "/shoes-store-app/static/js/2.c5271773.chunk.js.LICENSE.txt",
+    "static/css/main.4420ebab.chunk.css.map": "/shoes-store-app/static/css/main.4420ebab.chunk.css.map",
+    "static/js/2.96a60704.chunk.js.LICENSE.txt": "/shoes-store-app/static/js/2.96a60704.chunk.js.LICENSE.txt",
     "static/media/jordan.af2ea5a9.png": "/shoes-store-app/static/media/jordan.af2ea5a9.png",
     "static/media/nike.80761db6.png": "/shoes-store-app/static/media/nike.80761db6.png",
     "static/media/nikeWebBackground.e40280a8.jpeg": "/shoes-store-app/static/media/nikeWebBackground.e40280a8.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.50c26131.js",
+    "static/js/runtime-main.6c5a8d97.js",
     "static/css/2.01c51683.chunk.css",
-    "static/js/2.c5271773.chunk.js",
-    "static/css/main.6a394f27.chunk.css",
-    "static/js/main.313ee212.chunk.js"
+    "static/js/2.96a60704.chunk.js",
+    "static/css/main.4420ebab.chunk.css",
+    "static/js/main.16119d3f.chunk.js"
   ]
 }
