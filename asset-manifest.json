@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/shoes-store-app/static/css/main.757595bc.chunk.css",
-    "main.js": "/shoes-store-app/static/js/main.82d2bd31.chunk.js",
-    "main.js.map": "/shoes-store-app/static/js/main.82d2bd31.chunk.js.map",
+    "main.css": "/shoes-store-app/static/css/main.138304b7.chunk.css",
+    "main.js": "/shoes-store-app/static/js/main.532f23d7.chunk.js",
+    "main.js.map": "/shoes-store-app/static/js/main.532f23d7.chunk.js.map",
     "runtime-main.js": "/shoes-store-app/static/js/runtime-main.6c5a8d97.js",
     "runtime-main.js.map": "/shoes-store-app/static/js/runtime-main.6c5a8d97.js.map",
     "static/css/2.01c51683.chunk.css": "/shoes-store-app/static/css/2.01c51683.chunk.css",
-    "static/js/2.51cf8edd.chunk.js": "/shoes-store-app/static/js/2.51cf8edd.chunk.js",
-    "static/js/2.51cf8edd.chunk.js.map": "/shoes-store-app/static/js/2.51cf8edd.chunk.js.map",
+    "static/js/2.0b3b26b3.chunk.js": "/shoes-store-app/static/js/2.0b3b26b3.chunk.js",
+    "static/js/2.0b3b26b3.chunk.js.map": "/shoes-store-app/static/js/2.0b3b26b3.chunk.js.map",
     "static/js/3.1a7ee17a.chunk.js": "/shoes-store-app/static/js/3.1a7ee17a.chunk.js",
     "static/js/3.1a7ee17a.chunk.js.map": "/shoes-store-app/static/js/3.1a7ee17a.chunk.js.map",
     "index.html": "/shoes-store-app/index.html",
     "static/css/2.01c51683.chunk.css.map": "/shoes-store-app/static/css/2.01c51683.chunk.css.map",
-    "static/css/main.757595bc.chunk.css.map": "/shoes-store-app/static/css/main.757595bc.chunk.css.map",
-    "static/js/2.51cf8edd.chunk.js.LICENSE.txt": "/shoes-store-app/static/js/2.51cf8edd.chunk.js.LICENSE.txt",
+    "static/css/main.138304b7.chunk.css.map": "/shoes-store-app/static/css/main.138304b7.chunk.css.map",
+    "static/js/2.0b3b26b3.chunk.js.LICENSE.txt": "/shoes-store-app/static/js/2.0b3b26b3.chunk.js.LICENSE.txt",
     "static/media/jordan.af2ea5a9.png": "/shoes-store-app/static/media/jordan.af2ea5a9.png",
     "static/media/nike.80761db6.png": "/shoes-store-app/static/media/nike.80761db6.png",
     "static/media/nikeWebBackground.e40280a8.jpeg": "/shoes-store-app/static/media/nikeWebBackground.e40280a8.jpeg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.6c5a8d97.js",
     "static/css/2.01c51683.chunk.css",
-    "static/js/2.51cf8edd.chunk.js",
-    "static/css/main.757595bc.chunk.css",
-    "static/js/main.82d2bd31.chunk.js"
+    "static/js/2.0b3b26b3.chunk.js",
+    "static/css/main.138304b7.chunk.css",
+    "static/js/main.532f23d7.chunk.js"
   ]
 }
