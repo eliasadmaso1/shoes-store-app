@@ -8,6 +8,47 @@
     align-items: center;
     flex-direction: column;
 }
+
+.home-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    background-color: rgb(246,246,246);
+    border-radius: 30px;
+
+}
+.accessories-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: rgb(246,246,246);
+    border-radius: 30px;
+}
+.acc-btn{
+    position: absolute;
+    color: white;
+    margin-top: 796px;
+    background: black;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: -738px;
+}
+.shoes-btn{
+    position: absolute;
+    color: white;
+    margin-top: 450px;
+    background: black;
+    padding: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: -410px;
+    width: 108px;
+
+}
 @media only screen and (min-width: 414px) and (max-width: 767px),
   (min-width: 412px) and (max-width: 767px),
   (min-width: 390px) and (max-width: 767px),
@@ -22,7 +63,53 @@
     }
     .homeContainer img{
         margin-top: 20%;
-        width: 370px;
+        width:488px;
+    }
+    
+    .home-images{
+        margin-bottom: 53px;
+    }
+    .home-images img{
+        width: 120px;
+    }
+    .accessories-div{
+        width:443px
+    }
+    .homeSection .womens-img{
+        width: 28vw;
+    }
+    .homeSection .kids-img{
+        width: 39vw;
+    }
+    .homeSection .mens-img{
+        width: 32vw;
+    }
+    .accessories-div img{
+        width:443px
+    }
+    .shoes-btn{
+        position: absolute;
+        color: white;
+        margin-top: 82px;
+        background: black;
+        border-radius: 25px;
+        padding: 1px;
+        font-size: 14px;
+        margin-left: -69px;
+        margin-left: -50px;
+        width: 67px;
+    }
+    .acc-btn{
+        position: absolute;
+        color: white;
+        margin-top: 338px;
+        background: black;
+        padding: 12px;
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: -290px;
+        border-radius: 25px;
+        width: 137px;
     }
 
     
