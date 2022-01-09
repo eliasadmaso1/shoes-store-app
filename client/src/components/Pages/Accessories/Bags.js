@@ -20,7 +20,8 @@ export default function Bags() {
 
 
 
-  return (<main style={{ marginTop: "85px" }}>
+  return (<main style={{ marginTop: "85px" }} className="main">
+    <h1 className="title">Bags</h1>
   <Grid container spacing={15} className="stuff-container">
 
     {accessories.map((product) => (

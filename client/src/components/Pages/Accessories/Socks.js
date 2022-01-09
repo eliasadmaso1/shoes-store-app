@@ -19,7 +19,9 @@ export default function Socks() {
 
 
 
-  return (<main style={{ marginTop: "85px" }}>
+  return (<main style={{ marginTop: "85px" }} className="main">
+        <h1 className="title">Socks</h1>
+
   <Grid container spacing={15} className="stuff-container">
 
     {accessories.map((product) => (

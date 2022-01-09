@@ -49,3 +49,20 @@
 .message-input{
      height: 90px;;
 }
+
+@media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+      .contact-form{
+        height: 30%;
+        width: 10%;
+        margin-left: 18%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: -5%;
+      }
+  }
