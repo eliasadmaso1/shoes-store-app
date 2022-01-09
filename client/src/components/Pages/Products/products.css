@@ -140,6 +140,42 @@ h1{
     margin-bottom: 58%;
 
 }
+@media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+    .shoe-images .img{
+        margin-left: -150px;
+        margin-top: -310px;
+        width: 150px;
+    }
+    .shoe-images img{
+        margin-top: -172%;
+        width: 150px;
+        margin-left: -24px;
+    }
+    .shoe-images .img2{
+        margin-top: 4px;
+        margin-left: -41.1%;
+        width: 150px;
+    }
+    .shoe-images .img3{
+        margin-top: 321px;
+    margin-left: -41.1%;
+    width: 150px;
+    }
+    .shoe-details p{
+        font-weight: bold;
+    }
+    .backButton{
+        margin-top: 4px;
+        margin-left: -24px;
+        color: black;
+        
+    }
+  }
 
 
 

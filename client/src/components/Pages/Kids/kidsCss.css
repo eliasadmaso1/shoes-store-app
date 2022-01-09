@@ -33,3 +33,40 @@
     font-size: 18px;
     border: solid 0;
 }
+
+@media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+    .kidsDiv{
+        height: 850px;
+        width: 400px;
+        margin-top: -30px;
+        margin-left: -118%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .kidsDiv .btn1{
+        
+        margin-right: -180%;
+        
+    }
+    .kidsDiv .btn2{
+        
+        margin-left: 294%;
+        
+    }
+    .kidsDiv img{
+        width: 563px;
+    margin-right: -804px;
+    }
+    }
+
+    .kidsDiv img{
+        margin-right:"90px";
+        position:"relative";
+    }

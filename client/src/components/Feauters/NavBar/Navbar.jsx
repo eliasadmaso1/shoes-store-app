@@ -88,22 +88,25 @@ export default function Navbar() {
 
           {user ? (
             <div className="icons">
-              <IconButton aria-label="show cart items" color="inherit" className="link1">
-                <UserDeleteOutlined onClick={logOut}  />{" "}
+              <IconButton aria-label="show cart items" color="inherit" >
+                <UserDeleteOutlined onClick={logOut}  className="link1"/>{" "}
               </IconButton>
-              <IconButton  className="link2">
+              <IconButton  >
                 <Link to="/Favorites"
+                className="link2"
                >
                   <HeartOutlined />
                 </Link>
               </IconButton>
-              <IconButton className="link3">
+              <IconButton >
                 <Badge
                   badgeContent={user ? products.length : null}
                   color="secondary"
+                  className="link3"
                 >
                   <Link
                     to="/CartPage"
+                    className="link3"
                                       >
                     <ShoppingCartOutlined />
                   </Link>
