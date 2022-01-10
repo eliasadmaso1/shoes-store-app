@@ -29,7 +29,7 @@
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
     .accessories-Container{
-        width: 438px;
+        width: 440px;
     }
     .background{
         display: flex;
@@ -47,21 +47,18 @@
     }
     .accessories-btn{
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         flex-direction: row;
-        margin-left: 28px;
+        width: 408px;
     
     }
     .accessories-btn .link{
         margin:"5px";
         font-weight:"bold";
         font-size: 10px;
-        margin-left: 75%;
     }
-    .accessories-Container{
-        width: 100px;
-    }
+    
     
 
     
