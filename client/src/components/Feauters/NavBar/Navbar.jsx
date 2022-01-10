@@ -43,7 +43,7 @@ export default function Navbar() {
   return (
     <AppBar position="fixed" className="appBar" color="inherit">
       <Toolbar>
-        <img src={Nike} width="40px" />
+        <img src={Nike} width="40px" className="nike-logo"/>
 
         <Typography variant="h7" className="title" color="inherit">
           <Link to="/" className="link">
@@ -88,17 +88,12 @@ export default function Navbar() {
 
           {user ? (
             <div className="icons">
-              <IconButton aria-label="show cart items" color="inherit" >
                 <UserDeleteOutlined onClick={logOut}  className="link1"/>{" "}
-              </IconButton>
-              <IconButton  >
                 <Link to="/Favorites"
                 className="link2"
                >
                   <HeartOutlined />
                 </Link>
-              </IconButton>
-              <IconButton >
                 <Badge
                   badgeContent={user ? products.length : null}
                   color="secondary"
@@ -111,7 +106,6 @@ export default function Navbar() {
                     <ShoppingCartOutlined />
                   </Link>
                 </Badge>
-              </IconButton>
             </div>
           ) : null}
         </div>
