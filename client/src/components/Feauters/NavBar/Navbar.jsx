@@ -72,7 +72,6 @@ export default function Navbar() {
                   textDecoration: "none",
                   fontWeight: "bold",
                   fontSize: "18px",
-                  marginLeft:"450px"
                 }}
               >
                 {" "}
