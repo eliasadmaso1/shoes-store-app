@@ -10,10 +10,9 @@ export default function Footer(){
     return(<><div className="footerDiv">
                <Link to="/About" style={{color:"white",marginRight:"1330px",marginTop:"-70px",fontWeight:"bold"}}>About</Link>
 
-        <a href=""><FacebookIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"5px"}}></FacebookIcon></a>
-        <a href=""><GitHubIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"5px"}}></GitHubIcon></a>
-        <a href=""><LinkedInIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"5px"}}></LinkedInIcon></a>
-        <a href=""><InstagramIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"10px"}}></InstagramIcon></a>
+        <a href="https://www.facebook.com/elias.admaso"><FacebookIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"5px"}}></FacebookIcon></a>
+        <a href="https://github.com/eliasadmaso1"><GitHubIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"5px"}}></GitHubIcon></a>
+        <a href="https://www.linkedin.com/in/elias-admaso-152790206/"><LinkedInIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"5px"}}></LinkedInIcon></a>
     </div>
     </>)
 }

@@ -62,9 +62,9 @@ export default function Navbar() {
           </Link>
         </Typography>
 
-        <div>
+       
           {user ? null : (
-            <IconButton>
+      
               <Link
                 to="/Login"
                 style={{
@@ -72,6 +72,7 @@ export default function Navbar() {
                   textDecoration: "none",
                   fontWeight: "bold",
                   fontSize: "18px",
+                  marginLeft:"450px"
                 }}
               >
                 {" "}
@@ -83,11 +84,12 @@ export default function Navbar() {
                   }}
                 />
               </Link>
-            </IconButton>
+          
           )}
 
           {user ? (
             <div className="icons">
+              <span className="welcome">Welcome, {userName}</span>
                 <UserDeleteOutlined onClick={logOut}  className="link1"/>{" "}
                 <Link to="/Favorites"
                 className="link2"
@@ -108,7 +110,7 @@ export default function Navbar() {
                 </Badge>
             </div>
           ) : null}
-        </div>
+     
       </Toolbar>
     </AppBar>
   );
