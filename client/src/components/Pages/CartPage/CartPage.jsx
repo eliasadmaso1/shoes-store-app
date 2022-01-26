@@ -19,9 +19,11 @@ import { useMyContext } from "../../context";
 export default function CartPage() {
   const [cartProducts, setCartProduct] = useState([]);
   const [favourites, setFavourites] = useState([]);
-  const { updateToggleCart, toggleCart, user } = useMyContext();
+  const { user,isUpdated,updateData } = useMyContext();
 
-  useEffect(() => {
+  
+
+  const refreshProducts = async () =>{
     if (user) {
       getCartProducts(user._id).then(async (cartProductsRes) => {
         const allProducts = await getAllProducts();
@@ -43,7 +45,10 @@ export default function CartPage() {
         setFavourites(correctProduct);
       });
     }
-  }, [user]);
+  }
+  useEffect(() => {
+    refreshProducts();
+  }, [user,isUpdated]);
 
   const totalPrice = cartProducts.reduce((price, product) => {
     price = price + product.price * product.quantity;
@@ -93,15 +98,15 @@ export default function CartPage() {
                     index={index}
                     remove={async () => {
                       await deleteProductFromCart(product._id, user._id);
-                      updateToggleCart();
+                      await updateData()
                     }}
                     addOne={async () => {
                       await addProductToCart(product._id, user._id);
-                      updateToggleCart();
+                      await updateData()
                     }}
                     removeOne={async () => {
                       await decrementProductFromCart(product._id, user._id);
-                      updateToggleCart();
+                      await updateData()
                     }}
                   />
                 </Grid>

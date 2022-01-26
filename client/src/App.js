@@ -8,6 +8,12 @@ import jwt from "jsonwebtoken";
 
 function App() {
   const [user, setUser] = useState();
+  const [isUpdated , setIsUpdated] = useState(true);
+
+  const updateData = ()=>{
+    setIsUpdated(prev => !prev);
+
+  }
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -18,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <ContextProvider value={{ user }}>
+    <ContextProvider value={{ user,updateData,isUpdated}}>
       <Router basename={process.env.NODE_ENV === 'production' ? '/shoes-store-app/' : '/'}>
         <Navbar />
         <Route />

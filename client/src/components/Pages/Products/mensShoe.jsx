@@ -37,6 +37,7 @@ const MensShoe = () => {
   const addProduct = () => {
     if (user) {
       addProductToCart(product._id, user._id);
+      
     } else {
       setMessage("You Must Login!");
     }

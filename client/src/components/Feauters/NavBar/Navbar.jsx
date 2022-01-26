@@ -20,7 +20,7 @@ import {
 } from "@ant-design/icons";
 
 export default function Navbar() {
-  const { user } = useMyContext();
+  const { user,isUpdated,updateData } = useMyContext();
   const [products, setProducts] = useState([]);
   const userName = user?.firstName || "Member";
 
@@ -38,7 +38,7 @@ export default function Navbar() {
         setProducts(result);
       });
     }
-  }, [user]);
+  }, [user,isUpdated]);
 
   return (
     <AppBar position="fixed" className="appBar" color="inherit">
