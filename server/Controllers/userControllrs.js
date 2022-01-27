@@ -21,10 +21,11 @@ const registerUser = async (req, res) => {
           .status(500)
           .json({ message: { msgBody: "Error has occured", msgError: true } });
       }
-      if (user) {
+      if (email,err) {
         res.status(400).json({
           message: { msgBody: "User Email already taken", msgError: true },
         });
+        throw err;
       }
       bcrypt.genSalt(12, (err, salt) => {
         if (err) throw err;
