@@ -61,7 +61,7 @@ export default function CartPage() {
         <>
           {" "}
           <div className="cartDiv">
-            <h2 style={{ marginRight: "80%",marginTop:"-300px" }} className="cart-title"> Bag</h2>
+            <h2 style={cartProducts ? { marginRight: "80%",marginTop:"-400px" } : {marginRight: "80%",marginTop:"-68%"}} className="cart-title"> Bag</h2>
             {totalPrice === 0 ? (
               <h3 style={{ marginTop: "15px", marginRight: "20%" }}>
                 There is no items in your bag

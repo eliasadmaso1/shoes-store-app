@@ -10,6 +10,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Nike from "../../../images/logos/nike.png";
 import { getCartProducts } from "../../../Service/cart-service";
+import {getFavoritesProducts} from '../../../Service/favorites-service'
 import { useState, useEffect } from "react";
 import { useMyContext } from "../../context";
 import {
@@ -22,6 +23,7 @@ import {
 export default function Navbar() {
   const { user,isUpdated,updateData } = useMyContext();
   const [products, setProducts] = useState([]);
+  const [favourites,setFavourites] = useState([])
   const userName = user?.firstName || "Member";
 
   const logOut = () => {
@@ -37,6 +39,12 @@ export default function Navbar() {
       getCartProducts(user._id).then((result) => {
         setProducts(result);
       });
+     if(user){
+        getFavoritesProducts(user._id).then((res)=>{
+          setFavourites(res);
+        })
+
+      }
     }
   }, [user,isUpdated]);
 
@@ -90,14 +98,20 @@ export default function Navbar() {
             <div className="icons">
               <span className="welcome">Welcome, {userName}</span>
                 <UserDeleteOutlined onClick={logOut}  className="link1"/>{" "}
+                <Badge
+                  badgeContent={user ? favourites.length : null}
+                  color="secondary"
+                  className="link3"
+                >
                 <Link to="/Favorites"
                 className="link2"
                >
                   <HeartOutlined />
                 </Link>
+                </Badge>
                 <Badge
                   badgeContent={user ? products.length : null}
-                  color="secondary"
+                  color="primary"
                   className="link3"
                 >
                   <Link

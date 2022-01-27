@@ -16,7 +16,7 @@ const MensShoe = () => {
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
 
-  const { user } = useMyContext();
+  const { user,isUpdated,updateData } = useMyContext();
 
   useEffect(() => {
     getMenShoes().then((result) => {
@@ -25,18 +25,20 @@ const MensShoe = () => {
       });
       setProduct(currectShoe);
     });
-  }, []);
+  }, [isUpdated]);
 
-  const changeBtn = () => {
+  const changeBtn = async() => {
     if (user) {
-      addFavorite(product._id, user._id);
+      await addFavorite(product._id, user._id);
+      await updateData();
     } else {
       setMessage1("You Must Login!");
     }
   };
-  const addProduct = () => {
+  const addProduct = async() => {
     if (user) {
-      addProductToCart(product._id, user._id);
+      await addProductToCart(product._id, user._id);
+      await updateData()
       
     } else {
       setMessage("You Must Login!");
@@ -55,6 +57,7 @@ const MensShoe = () => {
 
           <div className="shoe-details">
             <h3>{product.category}</h3>
+            <Link to={`/mensShoe/${product._id}`}><span></span></Link>
             <h1>{product.name}</h1>
             <h4>{product.price}$</h4>
             <h4 style={{ color: "green" }}>{product.status}</h4>

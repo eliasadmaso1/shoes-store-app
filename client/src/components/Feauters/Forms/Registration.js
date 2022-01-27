@@ -27,6 +27,7 @@ const errorsMessages = {
 const RegistrasionForm = () => {
 
   const [passwordError, setPasswordError] = useState([]);
+  const [successMessage,setSuccessMessage] = useState('');
   
   const [values,setValues] = useState({
     firstName:"",
@@ -44,9 +45,8 @@ const RegistrasionForm = () => {
    
 }
 
-const register = ()=>{
-  addUser(values.firstName,values.lastName,values.userName,values.email,values.password)
-}
+const register = async()=>{
+  await addUser(values.firstName,values.lastName,values.userName,values.email,values.password).then(setSuccessMessage('You Registerd Successfully'))}
 
 
   useEffect(()=>{
@@ -73,6 +73,7 @@ const register = ()=>{
 
 
         <Button className="form-button"  text="Registration" onClick={register}/>
+        <span>{successMessage}</span>
         <div class="login-form__links">
         </div>
       </div>

@@ -5,9 +5,13 @@ import { getFavoritesProducts } from "../../../Service/favorites-service";
 import { getAllProducts } from "../../../Service/productService";
 import { useState, useEffect } from "react";
 import { useMyContext } from "../../context";
+import DeleteIcon from "@material-ui/icons/Delete";
+import {  IconButton} from "@material-ui/core";
+
+
 
 function Favorites() {
-  const { user } = useMyContext();
+  const { user,isUpdated } = useMyContext();
   const [favoritesProducts, setFavoritesProduct] = useState([]);
 
   useEffect(() => {
@@ -21,7 +25,7 @@ function Favorites() {
         setFavoritesProduct(correctProduct);
       });
     }
-  }, [user]);
+  }, [user,isUpdated]);
 
   return (
     <>
@@ -59,6 +63,9 @@ function Favorites() {
                     <h4>{product.name}</h4>
                     <h5>{product.category}</h5>
                     <h5 >{product.price}$</h5>
+                    <IconButton>
+              <DeleteIcon />
+            </IconButton>
 
                     </div>
                 </Grid>
