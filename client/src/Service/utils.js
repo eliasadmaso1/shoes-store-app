@@ -1,3 +1,3 @@
 export const getServerBaseUrl = () => 
-"https://shoes-app-server.herokuapp.com/"
+"https://shoes-app-server.herokuapp.com"
 
