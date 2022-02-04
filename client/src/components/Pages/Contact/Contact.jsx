@@ -7,6 +7,16 @@ import emailjs from 'emailjs-com';
 import "./Contact.css";
 
 function Contact() {
+  const [fullName,setFullName] = useState('');
+  const [email,setEmail] = useState('');
+  const [message,setMessage] = useState('');
+
+  const refreshInputs = ()=>{
+    setFullName('');
+    setEmail('');
+    setMessage('');
+  }
+
   const [result,showResult] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,7 +27,8 @@ function Contact() {
       }, (error) => {
           console.log(error.text);
       });
-      showResult(true)
+      showResult(true);
+      
   };
   return (
     <>
@@ -51,13 +62,13 @@ function Contact() {
         />
         <p>Eliasadmaso1@gmail.com</p>
         <form className="contact-form" onSubmit={sendEmail}>
-        <input placeholder="Full Name" name="fullName"/>
+        <input placeholder="Full Name" name="fullName" value={fullName} onChange={(e)=>{setFullName(e.target.value)}}/>
         <br></br>
-        <input placeholder="Email" name="email"/>
+        <input placeholder="Email" name="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
         <br></br>
-        <input className="message-input" placeholder="Message" name="message"/>
+        <input className="message-input" placeholder="Message" name="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
         <br></br>
-        <button>send</button>
+        <button onClick={refreshInputs}>send</button>
         {result ? <div>Your Details Send Successfuly</div> : null}
         </form>
       </div>

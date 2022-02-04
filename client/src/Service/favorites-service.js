@@ -23,4 +23,20 @@ const addFavorite = async (productId, userId) => {
   }
 };
 
-export { getFavoritesProducts, addFavorite };
+const deleteFavourite = async (productId , userId)=>{
+  const options = {
+    method: "DELETE",
+    body: JSON.stringify({ productId, userId }),
+    headers: { "Content-Type": "application/json" },
+  };
+  try {
+    return fetch(`${getServerBaseUrl()}/favorites/delete-favorite`, options);
+  } catch (error) {
+    console.log(error);
+  }
+
+
+}
+
+
+export { getFavoritesProducts, addFavorite, deleteFavourite };

@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { useMyContext } from "../../context";
 import DeleteIcon from "@material-ui/icons/Delete";
 import {  IconButton} from "@material-ui/core";
+import {deleteFavourite} from '../../../Service/favorites-service'
 
 
 
@@ -64,7 +65,7 @@ function Favorites() {
                     <h5>{product.category}</h5>
                     <h5 >{product.price}$</h5>
                     <IconButton>
-              <DeleteIcon />
+              <DeleteIcon onClick={async()=>{ await deleteFavourite(product._id , user._id)}}/>
             </IconButton>
 
                     </div>
