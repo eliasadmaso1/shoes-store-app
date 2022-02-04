@@ -10,7 +10,6 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <div className={"light"}>
         <div theme className="homeContainer">
           <img src={nikeBack}  />

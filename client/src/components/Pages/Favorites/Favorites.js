@@ -12,7 +12,7 @@ import {deleteFavourite} from '../../../Service/favorites-service'
 
 
 function Favorites() {
-  const { user,isUpdated } = useMyContext();
+  const { user,isUpdated, updateData } = useMyContext();
   const [favoritesProducts, setFavoritesProduct] = useState([]);
 
   useEffect(() => {
@@ -65,7 +65,7 @@ function Favorites() {
                     <h5>{product.category}</h5>
                     <h5 >{product.price}$</h5>
                     <IconButton>
-              <DeleteIcon onClick={async()=>{ await deleteFavourite(product._id , user._id)}}/>
+              <DeleteIcon onClick={async()=>{ await deleteFavourite(product._id , user._id);  await updateData()}}/>
             </IconButton>
 
                     </div>
