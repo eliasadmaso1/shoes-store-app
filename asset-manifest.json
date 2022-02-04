@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/shoes-store-app/static/css/main.6966a4ba.chunk.css",
-    "main.js": "/shoes-store-app/static/js/main.00fad4b6.chunk.js",
-    "main.js.map": "/shoes-store-app/static/js/main.00fad4b6.chunk.js.map",
+    "main.js": "/shoes-store-app/static/js/main.bcecf3e4.chunk.js",
+    "main.js.map": "/shoes-store-app/static/js/main.bcecf3e4.chunk.js.map",
     "runtime-main.js": "/shoes-store-app/static/js/runtime-main.31821e82.js",
     "runtime-main.js.map": "/shoes-store-app/static/js/runtime-main.31821e82.js.map",
     "static/css/2.01c51683.chunk.css": "/shoes-store-app/static/css/2.01c51683.chunk.css",
-    "static/js/2.5d4862ed.chunk.js": "/shoes-store-app/static/js/2.5d4862ed.chunk.js",
-    "static/js/2.5d4862ed.chunk.js.map": "/shoes-store-app/static/js/2.5d4862ed.chunk.js.map",
+    "static/js/2.1f94a37c.chunk.js": "/shoes-store-app/static/js/2.1f94a37c.chunk.js",
+    "static/js/2.1f94a37c.chunk.js.map": "/shoes-store-app/static/js/2.1f94a37c.chunk.js.map",
     "static/js/3.ba21a1cc.chunk.js": "/shoes-store-app/static/js/3.ba21a1cc.chunk.js",
     "static/js/3.ba21a1cc.chunk.js.map": "/shoes-store-app/static/js/3.ba21a1cc.chunk.js.map",
     "index.html": "/shoes-store-app/index.html",
     "static/css/2.01c51683.chunk.css.map": "/shoes-store-app/static/css/2.01c51683.chunk.css.map",
     "static/css/main.6966a4ba.chunk.css.map": "/shoes-store-app/static/css/main.6966a4ba.chunk.css.map",
-    "static/js/2.5d4862ed.chunk.js.LICENSE.txt": "/shoes-store-app/static/js/2.5d4862ed.chunk.js.LICENSE.txt",
+    "static/js/2.1f94a37c.chunk.js.LICENSE.txt": "/shoes-store-app/static/js/2.1f94a37c.chunk.js.LICENSE.txt",
     "static/media/jordan.af2ea5a9.png": "/shoes-store-app/static/media/jordan.af2ea5a9.png",
     "static/media/nike.80761db6.png": "/shoes-store-app/static/media/nike.80761db6.png",
     "static/media/nikeWebBackground.e40280a8.jpeg": "/shoes-store-app/static/media/nikeWebBackground.e40280a8.jpeg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.31821e82.js",
     "static/css/2.01c51683.chunk.css",
-    "static/js/2.5d4862ed.chunk.js",
+    "static/js/2.1f94a37c.chunk.js",
     "static/css/main.6966a4ba.chunk.css",
-    "static/js/main.00fad4b6.chunk.js"
+    "static/js/main.bcecf3e4.chunk.js"
   ]
 }
