@@ -1,1 +1,0 @@
-# shoes-store-app
