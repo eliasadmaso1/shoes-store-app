@@ -8,11 +8,14 @@ import SubHeader from "../../Feauters/SubHeader/SubHeader";
 import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
+import Select from "../../Feauters/Select";
 
 const KidsShoe = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const { updateToggleCart,user } = useMyContext();
+  const [chosenSize, setChosenSize] = useState(null);
+
+  const { updateToggleCart, user } = useMyContext();
 
   useEffect(() => {
     getKidsShoes().then((result) => {
@@ -35,16 +38,25 @@ const KidsShoe = () => {
             <h1>{product.name}</h1>
             <h4>{product.price}$</h4>
             <h4 style={{ color: "green" }}>{product.status}</h4>
-            {user &&  <button
-              className="addButton"
-              onClick={async () => {
-                await addProductToCart(product._id,user._id);
-                updateToggleCart();
-              }}
-            >
-              Add To Bag
-            </button>}
-           
+            <Select
+              label="Size"
+              value={chosenSize}
+              setValue={setChosenSize}
+              options={["34","34.5","35","35.5","36"]}
+            />
+
+            {user && (
+              <button
+                className="addButton"
+                onClick={async () => {
+                  await addProductToCart(product._id, user._id,chosenSize);
+                  updateToggleCart();
+                }}
+              >
+                Add To Bag
+              </button>
+            )}
+
             <p>{product.description}</p>
             <Link to="/KidsShoes">
               <button className="backButton">Back To Shoes</button>

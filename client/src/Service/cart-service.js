@@ -10,10 +10,10 @@ const getCartProducts = async (userId) => {
   }
 };
 
-const addProductToCart = async (productId, userId) => {
+const addProductToCart = async (productId, userId, size) => {
   const options = {
     method: "POST",
-    body: JSON.stringify({ productId, userId }),
+    body: JSON.stringify({ productId, userId, size }),
     headers: { "Content-Type": "application/json" },
   };
   try {

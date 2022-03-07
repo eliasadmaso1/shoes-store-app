@@ -32,7 +32,7 @@ export default function CartPage() {
           const product = allProducts.find(
             (p) => p._id === cartProduct.productId
           );
-          return { quantity: cartProduct.quantity, ...product };
+          return { quantity: cartProduct.quantity, ...product,size:cartProduct.size };
         });
         setCartProduct(correctProduct);
       });
@@ -86,7 +86,7 @@ export default function CartPage() {
               {cartProducts.map((product, index) => (
                 <Grid
                   item
-                  key={`${product.id}-${index}`}
+                  key={`${product._id}-${index}`}
                   xs={12}
                   sm={6}
                   md={4}

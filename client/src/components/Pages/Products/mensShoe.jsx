@@ -9,14 +9,16 @@ import SubHeader from "../../Feauters/SubHeader/SubHeader";
 import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
+import Select from "../../Feauters/Select";
 
 const MensShoe = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
+  const [chosenSize, setChosenSize] = useState(null);
 
-  const { user,isUpdated,updateData } = useMyContext();
+  const { user, isUpdated, updateData } = useMyContext();
 
   useEffect(() => {
     getMenShoes().then((result) => {
@@ -27,7 +29,7 @@ const MensShoe = () => {
     });
   }, [isUpdated]);
 
-  const changeBtn = async() => {
+  const changeBtn = async () => {
     if (user) {
       await addFavorite(product._id, user._id);
       await updateData();
@@ -35,11 +37,10 @@ const MensShoe = () => {
       setMessage1("You Must Login!");
     }
   };
-  const addProduct = async() => {
+  const addProduct = async () => {
     if (user) {
-      await addProductToCart(product._id, user._id);
-      await updateData()
-      
+      await addProductToCart(product._id, user._id, chosenSize);
+      await updateData();
     } else {
       setMessage("You Must Login!");
     }
@@ -57,11 +58,20 @@ const MensShoe = () => {
 
           <div className="shoe-details">
             <h3>{product.category}</h3>
-            <Link to={`/mensShoe/${product._id}`}><span></span></Link>
+            <Link to={`/mensShoe/${product._id}`}>
+              <span></span>
+            </Link>
             <h1>{product.name}</h1>
             <h4>{product.price}$</h4>
             <h4 style={{ color: "green" }}>{product.status}</h4>
             <>
+              <Select
+                label="Size"
+                value={chosenSize}
+                setValue={setChosenSize}
+                options={["42","43","44","45","46"]}
+              />
+
               <button className="addButton" onClick={addProduct}>
                 Add To Bag
               </button>

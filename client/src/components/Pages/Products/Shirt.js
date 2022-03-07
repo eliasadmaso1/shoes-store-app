@@ -9,12 +9,15 @@ import SubHeader from "../../Feauters/SubHeader/SubHeader";
 import Footer from "../../Feauters/Footer/Footer";
 import {Link} from 'react-router-dom';
 import { useMyContext } from "../../context";
+import Select from '../../Feauters/Select';
+
 
 
 export default function Shirt() {
 
     const { id } = useParams();
     const [shirt, setShirt] = useState(null);
+    const [chosenSize,setChosenSize] = useState(null);
     const { user } = useMyContext();
 
     useEffect(() => {
@@ -43,7 +46,9 @@ export default function Shirt() {
               <h1>{shirt.name}</h1>
               <h4>{shirt.price}$</h4>
               <h4 style={{color:"green"}}>{shirt.status}</h4>
-              {user && <><button className="addButton" onClick={()=>{addProductToCart(shirt._id,user._id)}}>Add To Bag</button>
+              <Select label="Size" value={chosenSize} setValue={setChosenSize} options={shirt.sizes} />
+
+              {user && <><button className="addButton" onClick={()=>{addProductToCart(shirt._id,user._id,chosenSize)}}>Add To Bag</button>
             <button  className={"favouritesButton"} onClick={()=>{addFavorite(shirt._id,user._id)}}>Favourites</button></>}
               <p>{shirt.description}</p>
               <Link to="/MenShirts"><button className="backButton">Back To Clothing</button></Link>
