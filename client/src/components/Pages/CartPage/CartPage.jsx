@@ -55,6 +55,8 @@ export default function CartPage() {
     return price;
   }, 0);
 
+  console.log(cartProducts);
+
   return (
     <>
       {user ? (
@@ -74,7 +76,7 @@ export default function CartPage() {
                   borderBottom: "solid 0.6px",
                 }}
               >
-                Total price : ${totalPrice}
+                Total price : ${Math.floor(totalPrice)}
               </h3>
             )}
             <Grid
@@ -97,11 +99,11 @@ export default function CartPage() {
                     product={product}
                     index={index}
                     remove={async () => {
-                      await deleteProductFromCart(product._id, user._id);
+                      await deleteProductFromCart(product._id, user._id, product.size);
                       await updateData()
                     }}
                     addOne={async () => {
-                      await addProductToCart(product._id, user._id);
+                      await addProductToCart(product._id, user._id,product.size);
                       await updateData()
                     }}
                     removeOne={async () => {

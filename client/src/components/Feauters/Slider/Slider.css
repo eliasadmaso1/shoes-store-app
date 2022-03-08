@@ -1,0 +1,33 @@
+.div{
+    width: 1630px;
+    margin-left: 1.5%;
+      height: 540px;
+      margin-top: 5%;
+      
+    
+  }
+  
+  .nextBtn{
+    display: flex;
+    background: rgb(230, 230, 230);
+    margin-top: -18%;
+    margin-right: 28px;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+  }
+  
+  .prevBtn{
+    display: flex;
+    background: rgb(230, 230, 230);
+    margin-top: -17.5%;
+    margin-left: 19px;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+  
+  }

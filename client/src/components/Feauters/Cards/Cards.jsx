@@ -31,10 +31,10 @@ export default function CardComponent({
             {product.name}
           </Typography>
           <Typography variant="h6">{product.price + "$"}</Typography>
-
         </div>
-        <Typography variant="h6">Size - {product.size}</Typography>
-
+        {isCart ? (
+          <Typography variant="h6">Size - {product.size}</Typography>
+        ) : null}
       </CardContent>
       <CardActions disableSpacing className={classes.CardActions}>
         {isCart && (
@@ -50,13 +50,8 @@ export default function CardComponent({
             <IconButton>
               <RemoveIcon onClick={removeOne} />
             </IconButton>
-         
-              <Typography variant="h6">
-                Quantity - {product.quantity}
-              </Typography>
-           
-              
-           
+
+            <Typography variant="h6">Quantity - {product.quantity}</Typography>
           </>
         )}
       </CardActions>

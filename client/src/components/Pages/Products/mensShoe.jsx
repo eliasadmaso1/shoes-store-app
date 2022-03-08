@@ -29,7 +29,7 @@ const MensShoe = () => {
     });
   }, [isUpdated]);
 
-  const changeBtn = async () => {
+  const toFavourites = async () => {
     if (user) {
       await addFavorite(product._id, user._id);
       await updateData();
@@ -69,7 +69,7 @@ const MensShoe = () => {
                 label="Size"
                 value={chosenSize}
                 setValue={setChosenSize}
-                options={["42","43","44","45","46"]}
+                options={["42", "43", "44", "45", "46"]}
               />
 
               <button className="addButton" onClick={addProduct}>
@@ -78,7 +78,7 @@ const MensShoe = () => {
               <div style={{ fontWeight: "bold", marginLeft: "64px" }}>
                 {message}
               </div>
-              <button className={"favouritesButton"} onClick={changeBtn}>
+              <button className={"favouritesButton"} onClick={toFavourites}>
                 Favourites
               </button>
               <div style={{ fontWeight: "bold", marginLeft: "64px" }}>

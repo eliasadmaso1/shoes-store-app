@@ -1,11 +1,28 @@
 import "./styles.css";
-import Navbar from "../../Feauters/NavBar/Navbar";
 import nikeBack from "../../../images/logos/nikeWebBackground.jpeg";
 import { Link } from "react-router-dom";
 import Footer from "../../Feauters/Footer/Footer";
+import SliderComponent from "../../Feauters/Slider/Slider";
+import {getAllProducts} from '../../../Service/productService';
+import {useEffect,useState} from 'react';
 
 
 export default function Home() {
+
+  const [products,setProducts] = useState([]);
+
+  useEffect(async()=>{
+    await getAllProducts()
+    .then((res)=>{
+      setProducts(res)
+    })
+    
+
+  },[])
+
+  console.log(products);
+
+  
 
 
   return (
@@ -37,14 +54,8 @@ export default function Home() {
             />
           </Link>
         </div>
-        <div className="home-images">
-          <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f2279bda-f7d2-4687-aca9-c796c601e4f1/blazer-mid-77-jumbo-shoes-g1NlvJ.png" width="550px"/>
-          <img src="https://static.nike.com/a/images/w_960,c_limit/56bd12a4-776d-48ba-9dab-a25003f16699/image.webp" width="550px" style={{position:"relative"}}/>
-         <button className="shoes-btn"> <Link to="/MenShoes" style={{color:"white"}}>Shop</Link></button>
-          <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ab6e3782-7067-4a7a-9b66-e0f80aff1c60/air-force-1-low-07-shoes-kGqrWx.png" width="550px"/>
-
-
-        </div>
+        <SliderComponent products={products}/>
+        
         <div className="accessories-div">
           <img src="https://static.nike.com/a/images/w_960,c_limit/1cab4279-0152-4044-8851-233784df0c3c/image.webp" style={{position:"relative"}}/>
          <button className="acc-btn"> <Link to="/Accessories" style={{color:"white"}}>Accessories</Link></button>

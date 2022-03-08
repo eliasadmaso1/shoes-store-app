@@ -9,13 +9,16 @@ import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
 import Select from "../../Feauters/Select";
+import { addFavorite } from "../../../Service/favorites-service";
 
 const KidsShoe = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [chosenSize, setChosenSize] = useState(null);
+  const [message, setMessage] = useState(null);
+  const [message1, setMessage1] = useState(null);
 
-  const { updateToggleCart, user } = useMyContext();
+  const { user, isUpdated, updateData } = useMyContext();
 
   useEffect(() => {
     getKidsShoes().then((result) => {
@@ -25,6 +28,23 @@ const KidsShoe = () => {
       setProduct(currectShoe);
     });
   }, []);
+
+  const toFavourites = async () => {
+    if (user) {
+      await addFavorite(product._id, user._id);
+      await updateData();
+    } else {
+      setMessage1("You Must Login!");
+    }
+  };
+  const addProduct = async () => {
+    if (user) {
+      await addProductToCart(product._id, user._id, chosenSize);
+      await updateData();
+    } else {
+      setMessage("You Must Login!");
+    }
+  };
 
   return (
     product && (
@@ -42,19 +62,24 @@ const KidsShoe = () => {
               label="Size"
               value={chosenSize}
               setValue={setChosenSize}
-              options={["34","34.5","35","35.5","36"]}
+              options={["34", "34.5", "35", "35.5", "36"]}
             />
 
             {user && (
-              <button
-                className="addButton"
-                onClick={async () => {
-                  await addProductToCart(product._id, user._id,chosenSize);
-                  updateToggleCart();
-                }}
-              >
-                Add To Bag
-              </button>
+              <>
+                <button className="addButton" onClick={addProduct}>
+                  Add To Bag
+                </button>
+                <div style={{ fontWeight: "bold", marginLeft: "64px" }}>
+                  {message}
+                </div>
+                <button className={"favouritesButton"} onClick={toFavourites}>
+                  Favourites
+                </button>
+                <div style={{ fontWeight: "bold", marginLeft: "64px" }}>
+                  {message1}
+                </div>
+              </>
             )}
 
             <p>{product.description}</p>

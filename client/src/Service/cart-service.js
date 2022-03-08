@@ -36,10 +36,10 @@ const decrementProductFromCart = async (productId, userId) => {
   }
 };
 
-const deleteProductFromCart = async (productId, userId) => {
+const deleteProductFromCart = async (productId, userId, size) => {
   const options = {
     method: "DELETE",
-    body: JSON.stringify({ productId, userId }),
+    body: JSON.stringify({ productId, userId, size }),
     headers: { "Content-Type": "application/json" },
   };
   try {
