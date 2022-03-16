@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import passwordValidator from 'password-validator';
 import { pick } from 'lodash';
 import {addUser} from '../../../Service/user-service';
+import LoginForm from "./LoginForm";
 
 
 
@@ -27,7 +28,7 @@ const errorsMessages = {
 const RegistrasionForm = () => {
 
   const [passwordError, setPasswordError] = useState([]);
-  const [successMessage,setSuccessMessage] = useState('');
+  const [successMessage,setSuccessMessage] = useState(null);
   
   const [values,setValues] = useState({
     firstName:"",
@@ -61,7 +62,8 @@ const register = async()=>{
   },[values.password])
 
   return (
-    <div class="login-form" >
+    <>
+    {successMessage ? <><h1>{successMessage}</h1><LoginForm/></> :  <div class="login-form" >
       <div class="login-form__content">
         <div class="login-form__header">Registration</div>
         <Input type="text" name="firstName" placeholder="First Name"  handleChange={handleChange}/>
@@ -73,11 +75,12 @@ const register = async()=>{
 
 
         <Button className="form-button"  text="Registration" onClick={register}/>
-        <span>{successMessage}</span>
         <div class="login-form__links">
         </div>
       </div>
-     </div>
+     </div> }
+  
+     </>
   );
 };
 

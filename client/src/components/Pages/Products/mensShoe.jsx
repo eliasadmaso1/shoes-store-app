@@ -10,10 +10,12 @@ import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
 import Select from "../../Feauters/Select";
+import SliderComponent from "../../Feauters/Slider/Slider";
 
 const MensShoe = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [products,setProducts] = useState([]);
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
   const [chosenSize, setChosenSize] = useState(null);
@@ -22,6 +24,7 @@ const MensShoe = () => {
 
   useEffect(() => {
     getMenShoes().then((result) => {
+      setProducts(result)
       const currectShoe = result.find((shoe) => {
         return shoe._id === id;
       });
@@ -91,6 +94,8 @@ const MensShoe = () => {
             </Link>
           </div>
         </div>
+        <h1 style={{marginLeft:"20px",fontSize:"22px"}}>You Might Also Like</h1>
+        <SliderComponent products={products} route='MenShoes'/>
         <Footer />
       </>
     )

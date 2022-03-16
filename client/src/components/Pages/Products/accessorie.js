@@ -9,16 +9,20 @@ import SubHeader from "../../Feauters/SubHeader/SubHeader";
 import Footer from "../../Feauters/Footer/Footer";
 import { useMyContext } from "../../context";
 import { Link } from "react-router-dom";
+import SliderComponent from "../../Feauters/Slider/Slider";
+
 
 const Accessorie = () => {
   const { id } = useParams();
   const [accessorie, setAccessorie] = useState(null);
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
-  const { user, isUpdated, updateData } = useMyContext();
+  const { user,  updateData } = useMyContext();
+  const [products,setProducts] = useState([]);
 
   useEffect(() => {
     getAccessories().then((result) => {
+      setProducts(result);
       const currectAccessorie = result.find((product) => {
         return product._id === id;
       });
@@ -78,6 +82,11 @@ const Accessorie = () => {
             </Link>
           </div>
         </div>
+        <h1 style={{ marginLeft: "20px", fontSize: "22px" }}>
+          You Might Also Like
+        </h1>
+        <SliderComponent products={products} route='Accessories'/>
+
         <Footer />
       </>
     )

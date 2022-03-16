@@ -24,21 +24,16 @@
     align-items: center;
 
 }
-.about-3{
-    width: 100vw;
-    height: 900px;
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(243 243 243);
-    justify-content: flex-start;
-    align-items: center;
 
-}
 
 .sub-about{
     display: flex;
     flex-direction: column;
-    margin-left: 250px;
+    margin-left: 180px;
+}
+
+h3{
+    margin-right: 50px;
 }
 
 @media only screen and (min-width: 414px) and (max-width: 767px),

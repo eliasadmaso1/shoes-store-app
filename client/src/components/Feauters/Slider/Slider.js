@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./Slider.css";
+import { Link } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -20,7 +21,7 @@ function SampleNextArrow(props) {
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "26px",
-        marginRight:"28px"
+        marginRight: "28px",
       }}
       onClick={onClick}
     />
@@ -43,14 +44,14 @@ function SamplePrevArrow(props) {
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "26px",
-        marginLeft:"19px"
+        marginLeft: "19px",
       }}
       onClick={onClick}
     />
   );
 }
 
-function SliderComponent({ products }) {
+function SliderComponent({ products, route }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -64,15 +65,15 @@ function SliderComponent({ products }) {
     <>
       <div className="div">
         <Slider {...settings}>
-          {products.map((product)=>{
-            return(
+          {products.map((product) => {
+            return (
               <div className="image-div">
-              <img src={product.images[0]} width="400" height="500"/>
-            </div>
-            )
+                <Link to={`/${route}`}>
+                  <img src={product.images[0]} width="400" height="500" />
+                </Link>
+              </div>
+            );
           })}
-       
-         
         </Slider>
       </div>
     </>

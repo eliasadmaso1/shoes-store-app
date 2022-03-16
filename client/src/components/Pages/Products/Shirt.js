@@ -10,6 +10,7 @@ import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
 import Select from "../../Feauters/Select";
+import SliderComponent from "../../Feauters/Slider/Slider";
 
 export default function Shirt() {
   const { id } = useParams();
@@ -17,7 +18,8 @@ export default function Shirt() {
   const [chosenSize, setChosenSize] = useState(null);
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
-  const { user, isUpdated, updateData } = useMyContext();
+  const [products, setProoducts] = useState([]);
+  const { user, updateData } = useMyContext();
 
   const toFavourites = async () => {
     if (user) {
@@ -38,6 +40,7 @@ export default function Shirt() {
 
   useEffect(() => {
     getShirts().then((result) => {
+      setProoducts(result);
       const currectAccessorie = result.find((product) => {
         return product._id === id;
       });
@@ -49,13 +52,13 @@ export default function Shirt() {
     shirt && (
       <>
         <SubHeader />
-        <div className="shoe-images">
+        <div className="shirts-images">
           <img src={shirt.images[0]} width="500" />
           <img className="img" src={shirt.images[3]} width="500" />
           <img className="img2" src={shirt.images[2]} width="500" />
           <img className="img3" src={shirt.images[1]} width="500" />
 
-          <div className="shoe-details">
+          <div className="shirts-details">
             <h3>{shirt.category}</h3>
             <h1>{shirt.name}</h1>
             <h4>{shirt.price}$</h4>
@@ -90,6 +93,12 @@ export default function Shirt() {
             </Link>
           </div>
         </div>
+        <h1 style={{ marginLeft: "20px", fontSize: "22px" }}>
+          You Might Also Like
+        </h1>
+
+        <SliderComponent products={products} route="MenShirts" />
+
         <Footer />
       </>
     )

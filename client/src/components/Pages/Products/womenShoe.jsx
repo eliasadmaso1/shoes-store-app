@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
 import Select from "../../Feauters/Select";
 import { addFavorite } from "../../../Service/favorites-service";
+import SliderComponent from "../../Feauters/Slider/Slider";
+
 
 const WomensShoe = () => {
   const { id } = useParams();
@@ -18,6 +20,7 @@ const WomensShoe = () => {
   const [chosenSize, setChosenSize] = useState(null);
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
+  const [products,setProducts] = useState([]);
 
   const toFavourites = async () => {
     if (user) {
@@ -38,6 +41,7 @@ const WomensShoe = () => {
 
   useEffect(() => {
     getWomenShoes().then((result) => {
+      setProducts(result);
       const currectShoe = result.find((shoe) => {
         return shoe._id === id;
       });
@@ -49,10 +53,10 @@ const WomensShoe = () => {
     product && (
       <>
         <SubHeader />
-        <div className="shoe-images">
+        <div className="shoe-images-womens">
           <img src={product.images[0]} width="500" />
           <img className="img" src={product.images[1]} width="500" />
-          <div className="shoe-details">
+          <div className="shoe-details-womens">
             <h3>{product.category}</h3>
             <h1>{product.name}</h1>
             <h4>{product.price}$</h4>
@@ -86,6 +90,8 @@ const WomensShoe = () => {
             </Link>
           </div>
         </div>
+        <h1 style={{marginLeft:"20px",fontSize:"22px"}}>You Might Also Like</h1>
+        <SliderComponent products={products} route='WomensShoes'/>
         <Footer />
       </>
     )

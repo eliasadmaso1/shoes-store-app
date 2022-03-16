@@ -31,3 +31,35 @@
     border-radius: 26px;
   
   }
+
+
+  @media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+
+    .div{
+      width: 0px;
+        height: 0px;
+        
+      
+    }
+    
+    .nextBtn{
+    
+      width: 0px;
+      height: 0px;
+     
+    }
+    
+    .prevBtn{
+      
+      width: 0px;
+      height: 0px;
+     
+    
+    }
+
+  }

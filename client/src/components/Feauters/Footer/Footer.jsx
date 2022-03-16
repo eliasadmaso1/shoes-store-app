@@ -8,7 +8,6 @@ import {Link } from 'react-router-dom';
 
 export default function Footer(){
     return(<><div className="footerDiv">
-               <Link to="/About" style={{color:"white",marginRight:"1330px",marginTop:"-70px",fontWeight:"bold"}}>About</Link>
 
         <a href="https://www.facebook.com/elias.admaso"><FacebookIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"5px"}}></FacebookIcon></a>
         <a href="https://github.com/eliasadmaso1"><GitHubIcon style={{color:"gray",fontSize:"40px",padding:"5px",marginRight:"5px"}}></GitHubIcon></a>

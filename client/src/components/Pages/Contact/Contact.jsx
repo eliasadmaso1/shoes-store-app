@@ -66,7 +66,7 @@ function Contact() {
         <br></br>
         <input placeholder="Email" name="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
         <br></br>
-        <input className="message-input" placeholder="Message" name="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
+        <textarea className="message-input" placeholder="Message" name="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
         <br></br>
         <button onClick={refreshInputs}>send</button>
         {result ? <div>Your Details Send Successfuly</div> : null}
