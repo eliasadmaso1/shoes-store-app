@@ -51,10 +51,10 @@ export default function Navbar() {
   return (
     <AppBar position="fixed" className="appBar" color="inherit">
       <Toolbar>
-        <img src={Nike} width="40px" className="nike-logo"/>
+        <img src={Nike}  className="nike-logo"/>
 
         <Typography variant="h7" className="title" color="inherit">
-          <Link to="/" className="link">
+          <Link to="/" className="link1">
             {" "}
             Home
           </Link>

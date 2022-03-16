@@ -38,20 +38,20 @@ export default function Home() {
         <div className="homeSection">
           <Link to="/Womens">
             <img
-            className="women-img"
-              src="https://pa.namshicdn.com/product/A6/02936W/v4/1-zoom-desktop.jpg"
+            className="img"
+              src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ce177064-ae79-49c7-a553-9229b09c2058/sportswear-oversized-funnel-neck-fleece-hoodie-211sK7.png"
             />
           </Link>
           <Link to="/Kids">
             <img
-            className="kids-img"
-              src="https://i.pinimg.com/originals/d6/de/4f/d6de4f0c79b3e2f9424a379a05c7d8fd.jpg"
+            className="img"
+              src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/d1915ba4-e40f-427d-9ad1-7d429cb40dce/sportswear-older-short-sleeve-top-PZKvvv.png"
             />
           </Link>
           <Link to="/Mens">
             <img
-            className="mens-img"
-              src="https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto/5d1dc95a-50db-4259-8c87-00f151426155/air-t-shirt-5B9kGf.jpg"
+            className="img"
+              src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/751b2bcd-b39b-487a-a670-6c780e7be4f5/sportswear-t-shirt-LJpTf2.png"
             />
           </Link>
         </div>
