@@ -7,10 +7,12 @@ import {getAllProducts} from '../../../Service/productService';
 import {useEffect,useState} from 'react';
 
 
+
 export default function Home() {
 
+ 
+
   const [products,setProducts] = useState([]);
-  let isMobile;
 
 
  
