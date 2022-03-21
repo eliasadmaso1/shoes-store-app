@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Route from "./Routing/Route";
-import Navbar from "./components/Feauters/NavBar/Navbar";
 import { ContextProvider } from "./components/context";
 import { useState, useEffect } from "react";
 import jwt from "jsonwebtoken";
+import Navbar from "./components/Feauters/NavBar/Navbar";
 
 function App() {
   const [user, setUser] = useState();

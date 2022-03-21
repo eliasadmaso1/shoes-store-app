@@ -1,16 +1,18 @@
-.accessories-Container {
-  margin-top: 85px;
+.accessories {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.accessories-btn {
+.buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .background {
   display: flex;
   justify-content: center;
-  flex-direction: row;
   margin-top: 15px;
 }
 
@@ -24,45 +26,7 @@
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
-  .accessories-Container {
-    width: 514px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .background {
-    display: flex;
-    width: 514px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-    margin-left: 28px;
-  }
-
-  .background img {
-    transition: 0.5s;
-    width: 514px;
-  }
-  .accessories-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 408px;
-  }
-  .accessories-btn .link {
-    margin: "5px";
-    font-weight: "bold";
-    font-size: 10px;
-  }
+  
 }
 
-.background img:hover {
-  opacity: 0.5;
-}
 
-.background-media img {
-  width: 600px;
-}
