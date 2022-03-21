@@ -1,16 +1,16 @@
-.womens-div{
-    height: 850px;
-    width: 100vw;
-    background-repeat: no-repeat;
-    margin-left: 60px;
-    margin-top: 30px;
+.women-div{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.women-div main{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
-.womens-div .btn1{
+
+.women-div .shoes-btn{
     position: absolute;
     margin-top: 41%;
     margin-right: 54%;
@@ -22,7 +22,7 @@
     border: solid 0;
 }
 
-.womens-div .btn2{
+.women-div .shirts-btn{
     position: absolute;
     margin-top: 41%;
     margin-left: 45%;
@@ -41,27 +41,5 @@
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
-    .womens-div{
-        height: 850px;
-        width: 98vw;
-        margin-top: 30px;
-        margin-left: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .womens-div img{
-        width: 900px;
-    }
-    .womens-div .btn1{
-        
-        margin-right: 102%;
-        
-    }
-    .womens-div .btn2{
-        
-        margin-left: 52%;
-        
-    }
+   
     }

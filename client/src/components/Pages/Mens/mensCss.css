@@ -1,16 +1,16 @@
-.mensDiv{
-    height: 850px;
-    width: 100vw;
-    margin-top: 30px;
-    margin-left: 20px;
+.men-div{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.men-div main{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 
-.mensDiv .btn1{
+.men-div .shoes-btn{
     position: absolute;
     margin-top: 41%;
     margin-right: 54%;
@@ -22,7 +22,7 @@
     border: solid 0;
 }
 
-.mensDiv .btn2{
+.men-div .shirts-btn{
     position: absolute;
     margin-top: 41%;
     margin-left: 45%;
@@ -40,30 +40,6 @@
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
-    .mensDiv{
-        height: 850px;
-        width: 1vw;
-        margin-top: 30px;
-        margin-left: -33px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .mensDiv .btn1{
-        
-        margin-right: -60%;
-        
-    }
-    .mensDiv .btn2{
-        
-        margin-left: 165%;
-        
-    }
-    .mensDiv img{
-    margin-right: 204px;
-    position: relative;
-    width: 988px;
-    }
+   
     }
 
