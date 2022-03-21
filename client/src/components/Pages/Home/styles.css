@@ -1,7 +1,6 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
 }
 
 main{
@@ -58,5 +57,10 @@ main img {
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
+
+    .container{
+      width: 130vw;
+
+    }
  
 }
