@@ -19,7 +19,6 @@ export default function Accessories() {
       </div>
       <div className="background">
           <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3ffd5908-483c-4ef4-879c-bf2dc70dd902/brasilia-winterized-training-duffel-bag-9krC2F.png" />
-          <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4f36bae4-9ca5-43cc-985b-72614519f75c/brasilia-jdi-backpack-rlSZGd.png"/>
 
       </div>
       

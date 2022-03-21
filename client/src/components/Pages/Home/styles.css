@@ -1,45 +1,54 @@
-.light {
-  background-color: white;
-  width: 100vw;
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
-.homeContainer {
+
+main{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
-.homeContainer img{
+
+main img {
   margin-top: 55px;
 }
 
+.content1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.accessories-div {
+.content1 img {
+  width: 500px;
+}
+.content1 img {
+  transition: 0.5s;
+}
+.content1 img:hover {
+  opacity: 0.5;
+}
+
+.content2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content3 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  background-color: rgb(246, 246, 246);
-  border-radius: 30px;
 }
-.acc-btn {
-  position: absolute;
-  border-radius: 25px;
-  color: white;
-  margin-top: 796px;
-  background: black;
-  padding: 12px;
-  font-size: 17px;
-  font-weight: bold;
-  margin-left: -738px;
+.content3 img {
+  transition: 0.5s;
+  width: 1000px;
 }
-.homeSection{
-  margin-left: 4%;
-
-}
-
-
-.img {
-  width: 30vw;
+.content3 img:hover {
+  opacity: 0.5;
+  width: 1000px;
 }
 
 
@@ -48,65 +57,6 @@
   (min-width: 390px) and (max-width: 767px),
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
-  (min-width: 360px) and (max-width: 767px)
-  {
-    .light{
-      width: 124vw;
-     
-    }
-  .homeContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .homeContainer img {
-    margin-top: 0%;
-    width: 550px;
-  }
-
-  .home-images {
-    margin-bottom: 53px;
-  }
-  .home-images img {
-    width: 120px;
-  }
+  (min-width: 360px) and (max-width: 767px) {
  
-  .accessories-div {
-    width: 532px;
-  }
-  .homeSection{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
-  .homeSection .img {
-    width: 500px;
-  }
-  
-  .accessories-div img {
-    width: 510px;
-  }
-  .acc-btn {
-    position: absolute;
-    color: white;
-    margin-top: 338px;
-    background: black;
-    padding: 12px;
-    font-size: 17px;
-    font-weight: bold;
-    margin-left: -290px;
-    border-radius: 25px;
-    width: 137px;
-  }
-}
-
-
-
-.homeSection img {
-  transition: 0.5s;
-}
-.homeSection img:hover {
-  opacity: 0.5;
 }

@@ -47,16 +47,15 @@ export default function Navbar() {
   }, [user, isUpdated]);
 
   return (
-    <div className="appBar">
-      <img src={Nike} className="nike-logo" />
-      <Link to="/" className="home">
-          {" "}
-          Home
-        </Link>
+    <div className="navbar">
+      <div className="logo">
+      <img src={Nike}  />
 
-      <div className="title" color="inherit">
+      </div>
+
+
+      <div className="menu" >
       <Link to="/" className="link">
-          {" "}
           Home
         </Link>
        
@@ -73,14 +72,10 @@ export default function Navbar() {
       </div>
 
       {user ? null : (
-        <Link
+        <div className="icons">
+              <Link
           to="/Login"
-          style={{
-            color: "black",
-            textDecoration: "none",
-            fontWeight: "bold",
-            fontSize: "18px",
-          }}
+         
         >
           {" "}
           <UserOutlined
@@ -91,6 +86,8 @@ export default function Navbar() {
             }}
           />
         </Link>
+        </div>
+    
       )}
 
       {user ? (
@@ -116,7 +113,7 @@ export default function Navbar() {
             </Link>
           </Badge>
         </div>
-      ) : null}
+      ) :   null}
     </div>
   );
 }
