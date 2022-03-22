@@ -19,9 +19,12 @@ export default function Home() {
   console.log(products);
 
   return (
-    <>
+    
       <div className="container">
+     
         <Navbar/>
+     
+      
         <main>
           <img src={nikeBack} />
         </main>
@@ -54,6 +57,6 @@ export default function Home() {
           <Footer />
         </footer>
       </div>
-    </>
+    
   );
 }
