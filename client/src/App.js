@@ -26,6 +26,7 @@ function App() {
   return (
     <ContextProvider value={{ user,updateData,isUpdated}}>
       <Router basename={process.env.NODE_ENV === 'production' ? '/shoes-store-app/' : '/'}>
+        <Navbar/>
         <Route />
       </Router>
     </ContextProvider>

@@ -7,7 +7,6 @@ export default function Womens() {
   return (
     <>
       <div className="women-div">
-        <Navbar />
         <main>
           <img
             src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_786,c_limit/860b579e-cbf4-4588-9107-86eafdd16014/women-s-shoes-clothing-accessories.jpg"

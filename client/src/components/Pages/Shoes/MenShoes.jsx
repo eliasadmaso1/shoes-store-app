@@ -6,6 +6,7 @@ import Select from "../../Feauters/Select";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 import { getMenShoes } from "../../../Service/productService";
+import Footer from "../../Feauters/Footer/Footer";
 
 export default function Shoes() {
   const [Shoes, setShoes] = useState([]);
@@ -35,7 +36,8 @@ export default function Shoes() {
   });
 
   return (
-    <main style={{ marginTop: "85px" }}>
+    <div className="men-shoes-div">
+      <div className="filter-div">
       <Select
         label="Shoes by price"
         value={selectedPrice}
@@ -57,53 +59,19 @@ export default function Shoes() {
         id="standard-basic"
         label="Search"
       />
-      <Grid container spacing={15} className="shoes-container">
+      </div>
+     
+      <div className="shoes-container">
         {filteredShoes.map((product) => (
-          <Grid item key={product._id} md={3}>
+         
             <Link to={`/mensShoe/${product._id}`}>
               {" "}
               <Card product={product} />
             </Link>
-          </Grid>
+         
         ))}
-        <div className="mightAlso">
-          <h2
-            style={{
-              marginRight: "78%",
-              fontSize: "15px",
-              marginBottom: "15%",
-            }}
-          >
-            YOU MIGHT ALSO LIKE
-          </h2>
-          <Grid container justify="center" spacing={4}>
-            <div className="img">
-              <Link to="/MenShoes">
-                <img
-                  src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/350e7f3a-979a-402b-9396-a8a998dd76ab/air-force-1-07-shoe-ZLZpmn.png"
-                  width="350"
-                />
-              </Link>
-
-              <h4>Nike Air Force 1 '07</h4>
-              <h5>Men's Shoes</h5>
-              <h6>275$</h6>
-            </div>
-            <div className="img">
-              <Link to="/MenShoes">
-                <img
-                  src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/748a9f2b-4d80-4bf4-805b-594288fed313/air-max-90-shoe-HzscVW.png"
-                  width="350"
-                />
-              </Link>
-
-              <h4>Nike Air Max 90</h4>
-              <h5>Men's Shoes</h5>
-              <h6>285$</h6>
-            </div>
-          </Grid>
-        </div>
-      </Grid>
-    </main>
+      </div>
+   <Footer/>
+    </div>
   );
 }

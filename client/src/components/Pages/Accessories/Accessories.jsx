@@ -12,7 +12,6 @@ export default function Accessories() {
 
   return (
   <div className="accessories">
-    <Navbar/>
       <main className="buttons">
       <Link to="Bags" ><Button type="black" className="link">Bags</Button></Link>
       <Link to="Hats"><Button type="black" className="link">Hats</Button></Link> 

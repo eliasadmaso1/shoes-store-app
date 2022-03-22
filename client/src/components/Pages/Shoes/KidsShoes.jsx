@@ -8,6 +8,7 @@ import Select from "../../Feauters/Select";
 import TextField from "@material-ui/core/TextField";
 import { getServerBaseUrl } from "../../../Service/utils";
 import { useMediaQuery } from 'react-responsive'
+import Footer from "../../Feauters/Footer/Footer";
 
 
 export default function Shoes() {
@@ -43,27 +44,42 @@ export default function Shoes() {
   });
 
   return (
-    <main style={{ marginTop: "85px" }}>
-      <Select
-        label="Shoes by price"
-        value={selectedPrice}
-        setValue={setSelectedPrice}
-        options={["All", "50", "100", "150", "200", "250", "300", "350", "400"]}
-      />
-      <TextField
-        onChange={(e) => setShoesName(e.target.value)}
-        id="standard-basic"
-        label="Search"
-      />
-      <Grid container spacing={15} style={mobile ? {display:"flex",flexDirection:"column"} : {display:"flex",flexDirection:"row"}}>
-        {filteredShoes.map((product) => (
-          <Grid item key={product._id} md={3}>
-            <Link to={`/kidsShoe/${product._id}`}>
-              <Card product={product} />
-            </Link>
-          </Grid>
-        ))}
-      </Grid>
-    </main>
+    <div className="shoes-div">
+    <div className="filter-div">
+    <Select
+      label="Shoes by price"
+      value={selectedPrice}
+      setValue={setSelectedPrice}
+      options={[
+        "All",
+        "50$",
+        "100$",
+        "150$",
+        "200$",
+        "250$",
+        "300$",
+        "350$",
+        "400$",
+      ]}
+    />
+    <TextField
+      onChange={(e) => setShoesName(e.target.value)}
+      id="standard-basic"
+      label="Search"
+    />
+    </div>
+   
+    <div className="shoes-container">
+      {filteredShoes.map((product) => (
+       
+          <Link to={`/kidsShoe/${product._id}`}>
+            {" "}
+            <Card product={product} />
+          </Link>
+       
+      ))}
+    </div>
+ <Footer/>
+  </div>
   );
 }

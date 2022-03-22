@@ -59,7 +59,7 @@ export default function Navbar() {
           Home
         </Link>
        
-        <Link to="/Accessories" className="link">
+        <Link to="/Accessories" className="link1">
           Accessories
         </Link>
         <Link to="/Contact" className="link">

@@ -26,6 +26,12 @@
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
+    .accessories{
+      width: 100%;
+    }
+    .background img{
+      width: 350px;
+    }
   
 }
 

@@ -22,7 +22,6 @@ export default function Home() {
     
       <div className="container">
      
-        <Navbar/>
      
       
         <main>

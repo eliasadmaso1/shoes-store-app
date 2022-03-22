@@ -1,8 +1,25 @@
 
+.shoes-div{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.shoes-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 35px;
+}
+.filter-div{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+
 a{
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 16px;
 
 
 }
@@ -11,42 +28,9 @@ a{
 
 
 
-.light{
-background-color: white;
-}
-.dark{
-background-color: black;
-}
 
-.mightAlso{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 90px;
-    border-bottom: solid 0.5px rgb(230, 230, 230);
-    padding: 30px;
 
-}
 
-.mightAlso .img{
-    margin-left: 15px;
-}
-
-.mightAlso .img h4{
-    color: black;
-
-}
-
-.mightAlso .img h5{
-    color:rgb(117, 117, 117);
-    
-}
-
-.mightAlso .img h6{
-    color: rgb(117, 117, 117);
-    
-}
 
 
 @media only screen and (min-width: 414px) and (max-width: 767px),
@@ -56,9 +40,10 @@ background-color: black;
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
       .shoes-container{
-        display: flex;
-        flex-direction: column;
-}
+          display: grid;
+          grid-template-columns: 1fr;
+      }
+
 
 
 }

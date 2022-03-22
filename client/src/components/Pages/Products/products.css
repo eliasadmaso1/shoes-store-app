@@ -1,46 +1,46 @@
-.productContainer {
-  display: flex;
-  flex-direction: row;
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 100%;
-  height: 500px;
+  
 }
 
-/* Mens Shoes Css */
-
-.shoe-images {
-  margin-top: -20px;
+.product-layout{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin-left: 35px;
-  justify-content: start;
+  
 }
 
-.shoe-images .img {
-  margin-left: 15px;
+
+
+.shoe-images{
+  width: 100%;
+  margin-top: 20px;
+
 }
-.shoe-images img {
-  margin-top: -45%;
+.shoe-images .img1{
+  margin-left: 25px;
+
 }
 .shoe-images .img2 {
-  margin-top: 33%;
-  margin-left: -61.6%;
-}
-.shoe-images .img3 {
-  margin-top: 33%;
-  margin-left: 0.8%;
+  margin-left: 25px;
+  
 }
 
-.shoe-details {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 12%;
-  margin-bottom: 40%;
+.shoe-images .img3 {
+  margin-left: 25px;
+  margin-top: 25px;
+  
+}
+.shoe-images .img4 {
+  margin-left: 25px;
+  margin-top: 25px;
+ 
+}
+
+.shoe-details{
+  width: 40%;
+  margin-top: 20px;
+
 }
 
 .shoe-details p {
@@ -48,78 +48,6 @@
   font-weight: bold;
 }
 
-/* Kids Shoes Css */
-
-.shoe-images-kids {
-    margin-top: -20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 35px;
-    justify-content: start;
-  }
-  
-  .shoe-images-kids .img {
-    margin-left: 15px;
-  }
-  .shoe-images-kids img {
-    margin-top: 2%;
-  }
-  
-  
-  .shoe-details-kids {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 12%;
-    margin-bottom: 5%;
-  }
-  
-  .shoe-details-kids p {
-    margin-right: 40px;
-    font-weight: bold;
-  }
-
-/* Womens Shoes Css */
-
-.shoe-images-womens {
-    margin-top: -20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 35px;
-    justify-content: start;
-  }
-  
-  .shoe-images-womens .img {
-    margin-left: 15px;
-  }
-  .shoe-images-womens img {
-    margin-top: -5%;
-  }
- 
-  
-  .shoe-details-womens {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 12%;
-    margin-bottom: 5%;
-
-  }
-  
-  .shoe-details-womens p {
-    margin-right: 40px;
-    font-weight: bold;
-  }
 
   /* Shirts Css */
 
@@ -163,6 +91,10 @@
     margin-right: 40px;
     font-weight: bold;
   }
+  h1{
+    margin-left: "20px";
+     font-size: "22px";
+  }
 
   /* Accessories Css */
 
@@ -202,9 +134,7 @@
   }
 
 
-h1 {
-  color: black;
-}
+
 
 .materialIcons {
   display: flex;
@@ -267,43 +197,81 @@ h1 {
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
-  .shoe-images .img {
-    margin-left: -150px;
-    margin-top: -300px;
-    width: 150px;
-  }
-  .shoe-images img {
-    margin-top: -596px;
-    width: 150px;
-    margin-left: -24px;
-  }
-  .shoe-images .img2 {
-    margin-top: 18px;
-    margin-left: -150px;
-    width: 150px;
-  }
-  .shoe-images .img3 {
-    margin-top: 338px;
-    margin-left: -150px;
-    width: 150px;
-  }
-  .shoe-details p {
-    font-weight: bold;
-  }
-  .backButton {
-    margin-top: 4px;
-    margin-left: -24px;
-    color: black;
-  }
-  .accessories-images .img1 {
-    margin-top: -129%;
-    margin-left: -6%;
-    width: 100px;
-  }
 
-  .accessories-images .img2 {
-    margin-top: -53%;
-    margin-left: -27.1%;
-    width: 100px;
-  }
+    .product-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      
+    }
+    
+    .product-layout{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    
+    
+    
+    .shoe-images{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+    
+    }
+    .shoe-images .img1{
+      width: 80%;
+      margin-top: 15px;
+      margin-left: 0;
+
+    
+    }
+    .shoe-images .img2 {
+      width: 80%;
+      margin-top: 15px;
+      margin-left: 0;
+
+      
+    }
+    
+    .shoe-images .img3 {
+      width: 80%;
+      margin-top: 15px;
+      margin-left: 0;
+
+
+      
+    }
+    .shoe-images .img4 {
+      width: 80%;
+      margin-top: 15px;
+      margin-left: 0;
+
+
+     
+    }
+    
+    .shoe-details{
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    
+    }
+    .shoe-details p{
+      color: white;
+    }
+    h1{
+      color: white;
+    }
+    
+   
+
+
+  
 }

@@ -52,24 +52,30 @@ const WomensShoe = () => {
   return (
     product && (
       <>
-        <SubHeader />
-        <div className="shoe-images-womens">
-          <img src={product.images[0]} width="500" />
-          <img className="img" src={product.images[1]} width="500" />
-          <div className="shoe-details-womens">
-            <h3>{product.category}</h3>
-            <h1>{product.name}</h1>
-            <h4>{product.price}$</h4>
-            <h4 style={{ color: "green" }}>{product.status}</h4>
-            <Select
-              label="Size"
-              value={chosenSize}
-              setValue={setChosenSize}
-              options={["39", "40", "41", "42", "43"]}
-            />
-
-            {user && (
+          <div className="product-container">
+          <SubHeader />
+          <div className="product-layout">
+            <div className="shoe-images">
+              <img className="img1" src={product.images[0]} width="500" />
+              <img className="img2" src={product.images[1]} width="500" />
+            
+            </div>
+            <div className="shoe-details">
+              <h3>{product.category}</h3>
+              <Link to={`/mensShoe/${product._id}`}>
+                <span></span>
+              </Link>
+              <h1>{product.name}</h1>
+              <h4>{product.price}$</h4>
+              <h4 style={{ color: "green" }}>{product.status}</h4>
               <>
+                <Select
+                  label="Size"
+                  value={chosenSize}
+                  setValue={setChosenSize}
+                  options={["39", "40", "41", "42", "43"]}
+                />
+
                 <button className="addButton" onClick={addProduct}>
                   Add To Bag
                 </button>
@@ -83,15 +89,18 @@ const WomensShoe = () => {
                   {message1}
                 </div>
               </>
-            )}
-            <p>{product.description}</p>
-            <Link to="/WomensShoes">
-              <button className="backButton">Back To Shoes</button>
-            </Link>
+              <p>{product.description}</p>
+              <Link to="/MenShoes">
+                <button className="backButton">Back To Shoes</button>
+              </Link>
+            </div>
           </div>
         </div>
-        <h1 style={{marginLeft:"20px",fontSize:"22px"}}>You Might Also Like</h1>
-        <SliderComponent products={products} route='WomensShoes'/>
+
+        <h1 style={{ marginLeft: "20px", fontSize: "22px" }}>
+          You Might Also Like
+        </h1>
+        <SliderComponent products={products} route="MenShoes" />
         <Footer />
       </>
     )
