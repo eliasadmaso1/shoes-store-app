@@ -41,7 +41,15 @@
 .welcome {
   font-weight: bold;
   margin-top: 15px;
+  margin-right: 30px;
 }
+.icon{
+  font-size: 25px;
+
+}
+
+
+
 
 
 
@@ -65,6 +73,13 @@
     }
     .menu{
       background-color: white;
+    }
+    .welcome{
+      color: white;
+      width: 0px;
+    }
+    .icon{
+      font-size: 15px;
     }
     
     

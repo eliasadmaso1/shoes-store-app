@@ -93,22 +93,22 @@ export default function Navbar() {
       {user ? (
         <div className="icons">
           <span className="welcome">Welcome, {userName}</span>
-          <UserDeleteOutlined onClick={logOut} className="link1" />{" "}
+          <UserDeleteOutlined onClick={logOut} className="icon" />{" "}
           <Badge
             badgeContent={user ? favourites.length : null}
             color="secondary"
-            className="link3"
+            className="badge"
           >
-            <Link to="/Favorites" className="link2">
+            <Link to="/Favorites" className="icon">
               <HeartOutlined />
             </Link>
           </Badge>
           <Badge
             badgeContent={user ? products.length : null}
             color="primary"
-            className="link3"
+            className="badge"
           >
-            <Link to="/CartPage" className="link3">
+            <Link to="/CartPage" className="icon">
               <ShoppingCartOutlined />
             </Link>
           </Badge>

@@ -17,6 +17,7 @@ import "./styles.css";
 import { useMyContext } from "../../context";
 import Paypal from "../Paypal/Paypal";
 import Loader from "../../Feauters/Loader/Loader";
+import Footer from "../../Feauters/Footer/Footer";
 
 export default function CartPage() {
   const [cartProducts, setCartProduct] = useState([]);
@@ -65,20 +66,12 @@ export default function CartPage() {
 
   return (
     <>
-      <div className="cartDiv">
-        <h2
-          style={
-            cartProducts.length > 0
-              ? { marginRight: "80%", marginTop: "-400px" }
-              : { marginRight: "80%", marginTop: "-68%" }
-          }
-          className="cart-title"
-        >
-          {" "}
-          Bag
-        </h2>
+      <div className="cart-container">
+        <h2>Bag</h2>
         {loading ? (
-          <Loader />
+          <h2>
+            <Loader />
+          </h2>
         ) : cartProducts.length === 0 && totalPrice === 0 ? (
           <h3
             style={{
@@ -91,35 +84,15 @@ export default function CartPage() {
             There is no items in your bag
           </h3>
         ) : (
-          <>
-            <h3
-              style={{
-                marginTop: "15px",
-                marginRight: "73%",
-                borderBottom: "solid 0.6px",
-              }}
-            >
-              Total price : ${Math.floor(totalPrice)}
-              <Paypal />
-            </h3>
-          </>
+          <div className="payment">
+            <h3>Total price : ${Math.floor(totalPrice)}</h3>
+            <Paypal />
+          </div>
         )}
 
-        <Grid
-          container
-          justify="center"
-          spacing={4}
-          style={{ flexDirection: "row" }}
-        >
+        <div className="cart-products-div">
           {cartProducts.map((product, index) => (
-            <Grid
-              item
-              key={`${product._id}-${index}`}
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
-            >
+            <div>
               <Card
                 isCart={true}
                 product={product}
@@ -141,23 +114,18 @@ export default function CartPage() {
                   await updateData();
                 }}
               />
-            </Grid>
+            </div>
           ))}
-        </Grid>
+        </div>
       </div>
-      <div className="favDiv">
-        <h2 style={{ marginRight: "78%", marginBottom: "55px" }}>
-          {" "}
+      <div className="favourites-products-div">
+        <h2 style={{ marginLeft: "50px", marginBottom: "55px" }}>
+         
           Favourites
         </h2>
-        <Grid
-          container
-          justify="center"
-          spacing={4}
-          style={{ flexDirection: "row" }}
-        >
+        <div className="favourites-layout">
           {favourites.map((product, index) => (
-            <Grid
+            <div
               item
               key={`${product.id}-${index}`}
               xs={12}
@@ -175,20 +143,15 @@ export default function CartPage() {
                 {product.category}
               </h4>
               <HeartFilled style={{ marginLeft: "36%", fontSize: "18px" }} />
-            </Grid>
+            </div>
           ))}
-        </Grid>
+        </div>
       </div>
-      <div className="mightAlso">
+      <div className="also-like-div">
         <h2 style={{ marginRight: "78%", fontSize: "15px" }}>
           YOU MIGHT ALSO LIKE
         </h2>
-        <Grid
-          container
-          justify="center"
-          spacing={4}
-          style={{ flexDirection: "row" }}
-        >
+        <div className="also-like-layout">
           <div className="img">
             <Link to="/MenShoes">
               <img
@@ -213,7 +176,7 @@ export default function CartPage() {
             <h5>Men's Shoes</h5>
             <h6>285$</h6>
           </div>
-        </Grid>
+        </div>
       </div>
     </>
   );
