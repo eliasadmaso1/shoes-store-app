@@ -59,6 +59,15 @@ export default function Navbar() {
           Home
         </Link>
        
+        <Link to="/Mens" className="link1">
+          Men
+        </Link>
+        <Link to="/Womens" className="link1">
+          Women
+        </Link>
+        <Link to="/Kids" className="link1">
+          Kids
+        </Link>
         <Link to="/Accessories" className="link1">
           Accessories
         </Link>

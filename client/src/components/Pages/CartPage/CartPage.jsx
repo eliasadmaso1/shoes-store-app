@@ -20,6 +20,7 @@ import Loader from "../../Feauters/Loader/Loader";
 import Footer from "../../Feauters/Footer/Footer";
 
 export default function CartPage() {
+  let delivery_cost = 40;
   const [cartProducts, setCartProduct] = useState([]);
   const [favourites, setFavourites] = useState([]);
   const { user, isUpdated, updateData } = useMyContext();
@@ -62,6 +63,8 @@ export default function CartPage() {
     return price;
   }, 0);
 
+  let subTotal = Math.floor(totalPrice);
+
   console.log(cartProducts);
 
   return (
@@ -84,54 +87,55 @@ export default function CartPage() {
             There is no items in your bag
           </h3>
         ) : (
-          <div className="payment">
-            <h3>Total price : ${Math.floor(totalPrice)}</h3>
-            <Paypal />
-          </div>
+        
+                <div className="cart-products-div">
+                    <div className="payment">
+          <h3>Subtotal - ${subTotal}</h3>
+          <h3>Estimated Delivery - ${delivery_cost}</h3>
+          <h3>Total - ${subTotal + delivery_cost}</h3>
+          <Paypal />
+        </div>
+       
+                {cartProducts.map((product, index) => (
+                  <div>
+                    <Card
+                      isCart={true}
+                      product={product}
+                      index={index}
+                      remove={async () => {
+                        await deleteProductFromCart(
+                          product._id,
+                          user._id,
+                          product.size
+                        );
+                        await updateData();
+                      }}
+                      addOne={async () => {
+                        await addProductToCart(product._id, user._id, product.size);
+                        await updateData();
+                      }}
+                      removeOne={async () => {
+                        await decrementProductFromCart(product._id, user._id);
+                        await updateData();
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+       
         )}
 
-        <div className="cart-products-div">
-          {cartProducts.map((product, index) => (
-            <div>
-              <Card
-                isCart={true}
-                product={product}
-                index={index}
-                remove={async () => {
-                  await deleteProductFromCart(
-                    product._id,
-                    user._id,
-                    product.size
-                  );
-                  await updateData();
-                }}
-                addOne={async () => {
-                  await addProductToCart(product._id, user._id, product.size);
-                  await updateData();
-                }}
-                removeOne={async () => {
-                  await decrementProductFromCart(product._id, user._id);
-                  await updateData();
-                }}
-              />
-            </div>
-          ))}
-        </div>
+
       </div>
       <div className="favourites-products-div">
-        <h2 style={{ marginLeft: "50px", marginBottom: "55px" }}>
+        <h2 >
          
           Favourites
         </h2>
         <div className="favourites-layout">
           {favourites.map((product, index) => (
             <div
-              item
-              key={`${product.id}-${index}`}
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
+              className="favourite-item"
             >
               <Link to={`/mensShoe/${product._id}`}>
                 <img src={product.images[0]} width="300" />
@@ -148,7 +152,7 @@ export default function CartPage() {
         </div>
       </div>
       <div className="also-like-div">
-        <h2 style={{ marginRight: "78%", fontSize: "15px" }}>
+        <h2 >
           YOU MIGHT ALSO LIKE
         </h2>
         <div className="also-like-layout">

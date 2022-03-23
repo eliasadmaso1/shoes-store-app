@@ -49,89 +49,11 @@
 }
 
 
-  /* Shirts Css */
+ 
+  
+  
 
-  .shirts-images {
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 35px;
-    justify-content: start;
-  }
-  
-  .shirts-images .img {
-    margin-left: 15px;
-  }
-  .shirts-images img {
-    margin-top: -45%;
-  }
-  .shirts-images .img2 {
-    margin-top: 33%;
-    margin-left: -61.6%;
-  }
-  .shirts-images .img3 {
-    margin-top: 33%;
-    margin-left: 0.8%;
-  }
-  
-  .shirts-details {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 12%;
-    margin-bottom: 40%;
-  }
-  
-  .shirts-details p {
-    margin-right: 40px;
-    font-weight: bold;
-  }
-  h1{
-    margin-left: "20px";
-     font-size: "22px";
-  }
-
-  /* Accessories Css */
-
-  .accessories-images {
-    margin-top: -20px;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 35px;
-    justify-content: start;
-  }
-  .accessories-images .img1 {
-    margin-top: 5%;
-  }
-  
-  .accessories-images .img2 {
-    margin-top: 5%;
-    margin-left: 3%;
-  }
-  
-  .accessories-details {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 12%;
-    margin-bottom: 5%;
-  }
-
-  .accessories-details p {
-    margin-right: 40px;
-    font-weight: bold;
-  }
+ 
 
 
 
@@ -266,8 +188,14 @@
     .shoe-details p{
       color: white;
     }
+    .shoe-details h1{
+      color: black;
+    }
     h1{
       color: white;
+    }
+    h3{
+      margin-right: 0px;
     }
     
    
