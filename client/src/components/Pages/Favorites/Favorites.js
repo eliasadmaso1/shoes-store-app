@@ -33,41 +33,16 @@ function Favorites() {
 
   return (
     <>
-      <div className="favoritesDiv">
-        <h2 style={{ marginLeft: "70%" }}>Favorites</h2>
-        {loading ? (<div className="loader"><Loader/></div>) :  favoritesProducts.length === 0 ? (
-          <h3 style={{ marginTop: "20%", marginLeft: "40%",fontWeight:"bold" }}>
-            {" "}
+      <div className="favourites-div">
+        <h2>Favorites</h2>
+        {loading ? (<div className="loader"><Loader/></div>) :  favoritesProducts.length === 0 && (
+          <h3>
             Items added to your Favourites will be saved here.
           </h3>
-        ) : (
-          <h3
-            style={{
-              marginTop: "64px",
-              marginLeft: "6%",
-              marginBottom: "45px",
-              fontSize: "20px",
-            }}
-          >
-            Favourites
-          </h3>
         )}
-        <Grid
-          container
-          justify="center"
-          spacing={4}
-          style={{ flexDirection: "row" }}
-        >
-          {favoritesProducts.map((product, index) => (
-            <Grid
-              item
-              key={`${product.id}-${index}`}
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
-            >
-              <div className="favorite">
+        <div className="favourites-display">
+          {favoritesProducts.map((product) => (
+              <div className="favourite">
                 <Link to={`/mensShoe/${product._id}`}>
                   <img src={product.images[0]} width="360" />
                 </Link>
@@ -83,9 +58,8 @@ function Favorites() {
                   />
                 </IconButton>
               </div>
-            </Grid>
           ))}
-        </Grid>
+        </div>
       </div>
     </>
   );

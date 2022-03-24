@@ -8,7 +8,7 @@ export default function Kids() {
     <div className="kids-div">
       <main>
         <img
-          src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_786,c_limit/f96ad2c0-6a05-422b-945e-73054832720b/nike-kids.jpg"
+          src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_786,c_limit/af5ee460-f507-46c7-8219-146242eae7e4/nike-kids.jpg"
 
         />
         <button className="shoes-btn">

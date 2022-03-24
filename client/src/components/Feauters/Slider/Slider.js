@@ -37,14 +37,14 @@ function SamplePrevArrow(props) {
         ...style,
         display: "block",
         background: "#e6e6e6",
-        marginTop: "-17.5%",
+        marginTop: "-17.99%",
         width: "35px",
         height: "35px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "26px",
-        marginLeft: "19px",
+        marginLeft: "96.5%",
       }}
       onClick={onClick}
     />
@@ -57,8 +57,17 @@ function SliderComponent({ products, route }) {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow  />,
+    prevArrow: <SamplePrevArrow  />,
+    responsive:[
+      {
+        breakpoint:426,
+        settings:{
+          slidesToShow:1,
+          centerMode:false
+        },
+      },
+    ],
   };
 
   return (

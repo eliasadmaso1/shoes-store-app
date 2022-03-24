@@ -1,11 +1,18 @@
 .div{
+
     width: 1630px;
-    margin-left: 1.5%;
       height: 540px;
       margin-top: 5%;
       
     
   }
+  .image-div{
+    width: 90%;
+    height: 90%;
+  }
+
+
+  
   
  
 
@@ -17,12 +24,16 @@
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
     .div{
-      width: 0px;
-      height: 0px;
-      
-        
-      
-    }
+      width: 0vw;
+      height: 0vh;
+   
+  }
+  .slider{
+    width: 0vw;
+    height: 0vh;
+    
+  }
+  
     
     
 

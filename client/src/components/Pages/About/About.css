@@ -1,29 +1,25 @@
 .about-container{
-    width: 100vw;
-    border: 2px solid black;
-    margin-top: 57px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .about-1{
-    width: 102vw;
-    height: 900px;
+   
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     background-color: rgb(243 243 243);
     align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-top: solid 2px gainsboro;
+    border-bottom: solid 2px gainsboro;
 
 }
-
-.about-2{
-    width: 100vw;
-    height: 900px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
+.about-1 img{
+    width: 650px;
 }
+
+
 
 
 .sub-about{
@@ -32,7 +28,7 @@
     margin-left: 180px;
 }
 
-h3{
+.sub-about h3{
     margin-right: 50px;
 }
 
@@ -42,60 +38,29 @@ h3{
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
-    .about-1{
-        width: 102vw;
-        height: 900px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        background-color: rgb(243 243 243);
-        align-items: center;
+      .about-1{
+          flex-direction: column;
+          justify-content: center;
+      }
+      .about-1 img{
+          width: 80vw;
+      }
+      .sub-about{
+          justify-content: center;
+          align-items: center;
+          margin-left: 1%;
+      }
+      .sub-about h3{
+          margin-right: 0px;
+      }
     
-    }
-    .about-1 img{
-        margin-left: -14px;
-        box-shadow: black 5px 10px;
-        margin-top: 59px;
-        margin-bottom: 36px;
-        width: 400px;
+    
+    
+   
+    
+   
 
-    }
-    
-    .about-2{
-        width: 100vw;
-        height: 900px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-    }
-    .about-2 img{
-        margin-left: -14px;
-        box-shadow: black 5px 10px;
-        margin-top: 59px;
-        margin-bottom: 36px;
-        width: 400px;
-
-    }
-    .about-3{
-        width: 100vw;
-        height: 900px;
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(243 243 243);
-        justify-content: flex-start;
-        align-items: center;
-    
-    }
-    .about-3 img{
-        margin-left: -14px;
-        box-shadow: black 5px 10px;
-        margin-top: 59px;
-        margin-bottom: 36px;
-        width: 400px;
-
-    }
+  
     
   }
 
