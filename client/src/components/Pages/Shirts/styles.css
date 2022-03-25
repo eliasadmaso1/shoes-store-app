@@ -1,13 +1,33 @@
-
-.back{
-    color: black;
-    border: solid 2px white;
-    margin-top: 5%;
-    margin-left: 1%;
-    background-color: black;
-    width: 50px;
-    padding: 4px;
-    padding-left: 6px;
-
-
-}
+.shirts-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1%;
+  
+  }
+  .shirts-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .shirt-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+  }
+  
+  
+  
+  
+  
+  
+  @media only screen and (min-width: 414px) and (max-width: 767px),
+    (min-width: 412px) and (max-width: 767px),
+    (min-width: 390px) and (max-width: 767px),
+    (min-width: 428px) and (max-width: 767px),
+    (min-width: 384px) and (max-width: 767px),
+    (min-width: 360px) and (max-width: 767px) {
+      .shirt-div{
+        grid-template-columns: 1fr;
+      }
+    }

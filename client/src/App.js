@@ -5,6 +5,8 @@ import { ContextProvider } from "./components/context";
 import { useState, useEffect } from "react";
 import jwt from "jsonwebtoken";
 import Navbar from "./components/Feauters/NavBar/Navbar";
+import SubHeader from "./components/Feauters/SubHeader/SubHeader";
+import Footer from "./components/Feauters/Footer/Footer";
 
 function App() {
   const [user, setUser] = useState();
@@ -27,7 +29,9 @@ function App() {
     <ContextProvider value={{ user,updateData,isUpdated}}>
       <Router basename={process.env.NODE_ENV === 'production' ? '/shoes-store-app/' : '/'}>
         <Navbar/>
+        <SubHeader/>
         <Route />
+        <Footer/>
       </Router>
     </ContextProvider>
   );

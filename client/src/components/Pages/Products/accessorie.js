@@ -5,20 +5,18 @@ import { useState, useEffect } from "react";
 import { getAccessories } from "../../../Service/productService";
 import { addProductToCart } from "../../../Service/cart-service";
 import { addFavorite } from "../../../Service/favorites-service";
-import SubHeader from "../../Feauters/SubHeader/SubHeader";
 import Footer from "../../Feauters/Footer/Footer";
 import { useMyContext } from "../../context";
 import { Link } from "react-router-dom";
 import SliderComponent from "../../Feauters/Slider/Slider";
-
 
 const Accessorie = () => {
   const { id } = useParams();
   const [accessorie, setAccessorie] = useState(null);
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
-  const { user,  updateData } = useMyContext();
-  const [products,setProducts] = useState([]);
+  const { user, updateData } = useMyContext();
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     getAccessories().then((result) => {
@@ -28,7 +26,7 @@ const Accessorie = () => {
       });
       setAccessorie(currectAccessorie);
     });
-  }, []);
+  }, [id]);
 
   const toFavourites = async () => {
     if (user) {
@@ -50,17 +48,19 @@ const Accessorie = () => {
   return (
     accessorie && (
       <>
-        <SubHeader />
-        <div className="accessories-images">
-          <img className="img1" src={accessorie.images[0]} width="500" />
-          <img className="img2" src={accessorie.images[1]} width="500" />
-
-          <div className="accessories-details">
-            <h3>{accessorie.category}</h3>
-            <h1>{accessorie.name}</h1>
-            <h4>{accessorie.price}$</h4>
-            <h4 style={{ color: "green" }}>{accessorie.status}</h4>
-            {user && (
+        <div className="product-container">
+          <div className="product-layout">
+            <div className="shoe-images">
+              <img className="img1" src={accessorie.images[0]} width="500" />
+              <img className="img2" src={accessorie.images[1]} width="500" />
+          
+            </div>
+            <div className="shoe-details">
+              <h3>{accessorie.category}</h3>
+             
+              <h1>{accessorie.name}</h1>
+              <h4>{accessorie.price}$</h4>
+              <h4 style={{ color: "green" }}>{accessorie.status}</h4>
               <>
                 <button className="addButton" onClick={addProduct}>
                   Add To Bag
@@ -75,19 +75,16 @@ const Accessorie = () => {
                   {message1}
                 </div>
               </>
-            )}
-            <p>{accessorie.description}</p>
-            <Link to="/Accessories">
-              <button className="backButton">Back To Accessories</button>
-            </Link>
+              <p>{accessorie.description}</p>
+              <Link to="/Accessories">
+                <button className="backButton">Back To Accessories</button>
+              </Link>
+            </div>
           </div>
         </div>
-        <h1 style={{ marginLeft: "20px", fontSize: "22px" }}>
-          You Might Also Like
-        </h1>
-        <SliderComponent products={products} route='Accessories'/>
 
-        <Footer />
+        <h1 style={{marginLeft:"20px",marginTop:"50px",fontSize:"22px"}}>You Might Also Like</h1>
+        <SliderComponent products={products} route="/Accessorie"/>
       </>
     )
   );

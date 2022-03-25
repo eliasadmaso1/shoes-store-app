@@ -77,7 +77,7 @@ function SliderComponent({ products, route }) {
           {products.map((product) => {
             return (
               <div className="image-div">
-                <Link to={`/${route}`}>
+                <Link to={`${route}/${product._id}`}>
                   <img src={product.images[0]} width="400" height="500" />
                 </Link>
               </div>

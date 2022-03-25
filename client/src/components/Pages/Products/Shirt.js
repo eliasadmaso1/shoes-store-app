@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { getShirts } from "../../../Service/productService";
 import { addProductToCart } from "../../../Service/cart-service";
 import { addFavorite } from "../../../Service/favorites-service";
-import SubHeader from "../../Feauters/SubHeader/SubHeader";
 import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
@@ -46,33 +45,33 @@ export default function Shirt() {
       });
       setShirt(currectAccessorie);
     });
-  }, []);
+  }, [id]);
 
   return (
     shirt && (
       <>
-        <SubHeader />
-        <div className="shirts-images">
-          <img src={shirt.images[0]} width="500" />
-          <img className="img" src={shirt.images[3]} width="500" />
-          <img className="img2" src={shirt.images[2]} width="500" />
-          <img className="img3" src={shirt.images[1]} width="500" />
+        <div className="product-container">
+          <div className="product-layout">
+            <div className="shoe-images">
+              <img className="img1" src={shirt.images[0]} width="500" />
+              <img className="img2" src={shirt.images[3]} width="500" />
+              <img className="img3" src={shirt.images[2]} width="500" />
+              <img className="img4" src={shirt.images[1]} width="500" />
+            </div>
+            <div className="shoe-details">
+              <h3>{shirt.category}</h3>
 
-          <div className="shirts-details">
-            <h3>{shirt.category}</h3>
-            <h1>{shirt.name}</h1>
-            <h4>{shirt.price}$</h4>
-            <h4 style={{ color: "green" }}>{shirt.status}</h4>
-            <Select
-              label="Size"
-              value={chosenSize}
-              setValue={setChosenSize}
-              options={shirt.sizes}
-            />
-
-            {user && (
+              <h1>{shirt.name}</h1>
+              <h4>{shirt.price}$</h4>
+              <h4 style={{ color: "green" }}>{shirt.status}</h4>
               <>
-                {" "}
+                <Select
+                  label="Size"
+                  value={chosenSize}
+                  setValue={setChosenSize}
+                  options={["XS", "S", "M", "L", "XL"]}
+                />
+
                 <button className="addButton" onClick={addProduct}>
                   Add To Bag
                 </button>
@@ -86,20 +85,18 @@ export default function Shirt() {
                   {message1}
                 </div>
               </>
-            )}
-            <p>{shirt.description}</p>
-            <Link to="/MenShirts">
-              <button className="backButton">Back To Clothing</button>
-            </Link>
+              <p>{shirt.description}</p>
+              <Link to="/">
+                <button className="backButton">Back To Shoes</button>
+              </Link>
+            </div>
           </div>
         </div>
-        <h1 style={{ marginLeft: "20px", fontSize: "22px" }}>
+
+        <h1 style={{ marginLeft: "20px", marginTop: "50px", fontSize: "22px" }}>
           You Might Also Like
         </h1>
-
-        <SliderComponent products={products} route="MenShirts" />
-
-        <Footer />
+        <SliderComponent products={products} route="/Shirt" />
       </>
     )
   );

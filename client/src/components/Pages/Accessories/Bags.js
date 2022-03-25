@@ -1,34 +1,32 @@
 import Card from "../../Feauters/Cards/Cards";
-import { Grid } from "@material-ui/core";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {getAccessories} from '../../../Service/productService';
-import './stuff.css';
-
+import { getAccessories } from "../../../Service/productService";
+import "./accessorie.css";
 
 export default function Bags() {
+  const [accessories, setAccessories] = useState([]);
 
+  useEffect(() => {
+    getAccessories().then((res) => {
+      setAccessories(
+        res.filter((a) => {
+          return a.group === "Bags";
+        })
+      );
+    });
+  }, []);
 
-    const [accessories,setAccessories] = useState([]);
-
-    useEffect(()=>{
-        getAccessories().then((res)=>{setAccessories(res.filter((a)=>{
-            return a.group === "Bags"
-        }))})
-        
-    },[])
-
-
-
-  return (<main style={{ marginTop: "85px" }} className="main">
-    <h1 className="title">Bags</h1>
-  <Grid container spacing={15} className="stuff-container">
-
-    {accessories.map((product) => (
-      <Grid item key={product._id} md={3}>
-         <Link to={`/Accessorie/${product._id}`}> <Card product={product} /></Link>
-      </Grid>
-    ))}
-  </Grid>
-</main>);
+  return (
+    <div className="accessorie-container">
+      <h1 className="accessorie-title" style={{color:"black"}}>Bags</h1>
+      <div className="accessorie-div">
+        {accessories.map((product) => (
+          <Link to={`/Accessorie/${product._id}`}>
+            <Card product={product} />
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 }

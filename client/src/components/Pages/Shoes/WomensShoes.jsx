@@ -79,7 +79,6 @@ export default function Shoes() {
        
       ))}
     </div>
- <Footer/>
   </div>
   );
 }

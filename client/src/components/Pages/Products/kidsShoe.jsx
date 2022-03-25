@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getKidsShoes } from "../../../Service/productService";
 import { addProductToCart } from "../../../Service/cart-service";
-import SubHeader from "../../Feauters/SubHeader/SubHeader";
 import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
@@ -30,7 +29,7 @@ const KidsShoe = () => {
       });
       setProduct(currectShoe);
     });
-  }, []);
+  }, [id]);
 
   const toFavourites = async () => {
     if (user) {
@@ -53,7 +52,6 @@ const KidsShoe = () => {
     product && (
       <>
           <div className="product-container">
-          <SubHeader />
           <div className="product-layout">
             <div className="shoe-images">
               <img className="img1" src={product.images[0]} width="500" />
@@ -62,9 +60,7 @@ const KidsShoe = () => {
             </div>
             <div className="shoe-details">
               <h3>{product.category}</h3>
-              <Link to={`/mensShoe/${product._id}`}>
-                <span></span>
-              </Link>
+            
               <h1>{product.name}</h1>
               <h4>{product.price}$</h4>
               <h4 style={{ color: "green" }}>{product.status}</h4>
@@ -90,7 +86,7 @@ const KidsShoe = () => {
                 </div>
               </>
               <p>{product.description}</p>
-              <Link to="/MenShoes">
+              <Link to="/KidsShoes">
                 <button className="backButton">Back To Shoes</button>
               </Link>
             </div>
@@ -100,8 +96,7 @@ const KidsShoe = () => {
         <h1 style={{ marginLeft: "20px", fontSize: "22px" }}>
           You Might Also Like
         </h1>
-        <SliderComponent products={products} route="MenShoes" />
-        <Footer />
+        <SliderComponent products={products} route="/kidsShoe" />
       </>
     )
   );

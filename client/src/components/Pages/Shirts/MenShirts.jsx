@@ -19,17 +19,15 @@ export default function Shirts() {
   }, []);
 
   return (
-    <main style={{ marginTop: "85px" }}>
-      <Grid container spacing={15}>
-        {shirts.map((product) => (
-          <Grid item key={product._id} md={3}>
-            <Link to={`/Shirt/${product._id}`}>
-              {" "}
-              <Card product={product} />
-            </Link>
-          </Grid>
-        ))}
-      </Grid>
-    </main>
+    <div className="shirts-container">
+    <h1 className="shirts-title" style={{color:"black"}}>Men Clothing</h1>
+    <div className="shirt-div">
+      {shirts.map((product) => (
+        <Link to={`/Shirt/${product._id}`}>
+          <Card product={product} />
+        </Link>
+      ))}
+    </div>
+  </div>
   );
 }

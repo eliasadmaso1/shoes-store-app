@@ -5,6 +5,7 @@ import Footer from "../../Feauters/Footer/Footer";
 import SliderComponent from "../../Feauters/Slider/Slider";
 import { getAllProducts } from "../../../Service/productService";
 import { useEffect, useState } from "react";
+import SubHeader from "../../Feauters/SubHeader/SubHeader";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -43,9 +44,6 @@ export default function Home() {
           <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_786,c_limit/25ab408d-6697-4b17-a80f-47aeeaa6eb32/nike-just-do-it.jpg" />
         </Link>
       </div>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }

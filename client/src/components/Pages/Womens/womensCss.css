@@ -8,6 +8,11 @@
     justify-content: center;
     align-items: center;
 }
+.women-div main img{
+    width: 70vw;
+    height: 90vh;
+
+}
 
 
 .women-div .shoes-btn{
@@ -41,14 +46,10 @@
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
-      .women-div{
-          width: 100%;
-      }
-      .women-div main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+      .women-div main img{
+        width: 95vw;
+        height: 40vh;
     
+}
    
     }

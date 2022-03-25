@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { getMenShoes } from "../../../Service/productService";
 import { addProductToCart } from "../../../Service/cart-service";
 import { addFavorite } from "../../../Service/favorites-service";
-import SubHeader from "../../Feauters/SubHeader/SubHeader";
 import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context";
@@ -30,7 +29,7 @@ const MensShoe = () => {
       });
       setProduct(currectShoe);
     });
-  }, [isUpdated]);
+  }, [id]);
 
   const toFavourites = async () => {
     if (user) {
@@ -53,7 +52,6 @@ const MensShoe = () => {
     product && (
       <>
         <div className="product-container">
-          <SubHeader />
           <div className="product-layout">
             <div className="shoe-images">
               <img className="img1" src={product.images[0]} width="500" />
@@ -63,9 +61,7 @@ const MensShoe = () => {
             </div>
             <div className="shoe-details">
               <h3>{product.category}</h3>
-              <Link to={`/mensShoe/${product._id}`}>
-                <span></span>
-              </Link>
+             
               <h1>{product.name}</h1>
               <h4>{product.price}$</h4>
               <h4 style={{ color: "green" }}>{product.status}</h4>
@@ -98,11 +94,10 @@ const MensShoe = () => {
           </div>
         </div>
 
-        <h1 >
+        <h1 style={{marginLeft:"20px",marginTop:"50px",fontSize:"22px"}}>
           You Might Also Like
         </h1>
-        <SliderComponent products={products} route="MenShoes" />
-        <Footer />
+        <SliderComponent products={products} route="/mensShoe" />
       </>
     )
   );

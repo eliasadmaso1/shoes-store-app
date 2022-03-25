@@ -1,0 +1,35 @@
+.accessorie-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1%;
+
+}
+.accessorie-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.accessorie-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+
+
+
+
+
+
+@media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+    .accessorie-div{
+      grid-template-columns: 1fr;
+    }
+  }
+
+

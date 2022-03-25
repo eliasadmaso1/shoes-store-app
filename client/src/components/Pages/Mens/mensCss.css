@@ -8,6 +8,10 @@
     justify-content: center;
     align-items: center;
 }
+.men-div main img{
+    width: 70vw;
+    height: 90vh;
+}
 
 
 .men-div .shoes-btn{
@@ -40,6 +44,10 @@
   (min-width: 428px) and (max-width: 767px),
   (min-width: 384px) and (max-width: 767px),
   (min-width: 360px) and (max-width: 767px) {
+    .men-div main img{
+        width: 95vw;
+        height: 40vh;
+    }
    
     }
 
