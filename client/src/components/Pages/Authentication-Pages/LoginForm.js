@@ -1,6 +1,6 @@
 import "./Form.css";
-import Input from "../Input/Input";
-import Button from "../Button/Button";
+import Input from "../../Feauters/Input/Input";
+import Button from "../../Feauters/Button/Button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { logedUser } from "../../../Service/user-service";
@@ -62,11 +62,7 @@ const LoginForm = () => {
           <Link to="/Registration" className="a">
             Registration Here
           </Link>
-          <br></br>
-          <br></br>
-          <Link to="/ForgotPasssword" className="a">
-            Forgot Password?
-          </Link>
+          
         </div>
       </div>
     </div>

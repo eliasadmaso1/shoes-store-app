@@ -1,14 +1,35 @@
 .div{
 
     width: 1630px;
-      height: 540px;
-      margin-top: 5%;
+      height: 840px;
+      margin-top: 3%;
       
     
   }
-  .image-div{
+  .product-div{
     width: 90%;
     height: 90%;
+    margin-top: 90px;
+  }
+  .name{
+    font-weight: bold;
+    font-size: 15px;
+
+  }
+
+  .price{
+    font-weight: bold;
+    margin-left: 345px;
+    margin-top: -41px;
+    font-size: 14px;
+
+  }
+  .category{
+    font-weight: bold;
+    margin-top: -16px;
+    color: #cccccc;
+    font-size: 14px;
+
   }
 
 

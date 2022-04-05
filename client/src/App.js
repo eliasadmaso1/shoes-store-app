@@ -10,12 +10,10 @@ import Footer from "./components/Feauters/Footer/Footer";
 
 function App() {
   const [user, setUser] = useState();
-  const [isUpdated , setIsUpdated] = useState(true);
-
-  const updateData = ()=>{
-    setIsUpdated(prev => !prev);
-
-  }
+  const [isUpdated, setIsUpdated] = useState(true);
+  const updateData = () => {
+    setIsUpdated((prev) => !prev);
+  };
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -26,12 +24,16 @@ function App() {
   }, []);
 
   return (
-    <ContextProvider value={{ user,updateData,isUpdated}}>
-      <Router basename={process.env.NODE_ENV === 'production' ? '/shoes-store-app/' : '/'}>
-        <Navbar/>
-        <SubHeader/>
+    <ContextProvider value={{ user, updateData, isUpdated }}>
+      <Router
+        basename={
+          process.env.NODE_ENV === "production" ? "/shoes-store-app/" : "/"
+        }
+      >
+        <Navbar />
+        <SubHeader />
         <Route />
-        <Footer/>
+        <Footer />
       </Router>
     </ContextProvider>
   );

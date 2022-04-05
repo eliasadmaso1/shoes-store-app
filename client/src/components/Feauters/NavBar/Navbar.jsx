@@ -7,19 +7,13 @@ import { getCartProducts } from "../../../Service/cart-service";
 import { getFavoritesProducts } from "../../../Service/favorites-service";
 import { useState, useEffect } from "react";
 import { useMyContext } from "../../context";
-import {
-  UserOutlined,
-  ShoppingCartOutlined,
-  UserDeleteOutlined,
-  HeartOutlined,
-} from "@ant-design/icons";
 
+import PersonIcon from "@mui/icons-material/Person";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import GroupRemoveIcon from "@mui/icons-material/GroupRemove";
 
 export default function Navbar() {
-
-  
-
-  
   const { user, isUpdated, updateData } = useMyContext();
   const [products, setProducts] = useState([]);
   const [favourites, setFavourites] = useState([]);
@@ -49,16 +43,14 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="logo">
-      <img src={Nike}  />
-
+        <img src={Nike} />
       </div>
 
-
-      <div className="menu" >
-      <Link to="/" className="link">
+      <div className="menu">
+        <Link to="/" className="link">
           Home
         </Link>
-       
+
         <Link to="/Mens" className="link1">
           Men
         </Link>
@@ -82,34 +74,30 @@ export default function Navbar() {
 
       {user ? null : (
         <div className="icons">
-              <Link
-          to="/Login"
-         
-        >
-          {" "}
-          <UserOutlined
-            style={{
-              fontSize: "22px",
-              marginLeft: "15px",
-              marginTop: "6px",
-            }}
-          />
-        </Link>
+          <Link to="/Login">
+            {" "}
+            <PersonIcon
+              style={{
+                fontSize: "30px",
+              }}
+            />
+          </Link>
         </div>
-    
       )}
 
       {user ? (
         <div className="icons">
           <span className="welcome">Welcome, {userName}</span>
-          <UserDeleteOutlined onClick={logOut} className="icon" />{" "}
+          <Link>
+            <GroupRemoveIcon onClick={logOut} className="icon" />{" "}
+          </Link>
           <Badge
             badgeContent={user ? favourites.length : null}
             color="secondary"
             className="badge"
           >
             <Link to="/Favorites" className="icon">
-              <HeartOutlined />
+              <FavoriteIcon />
             </Link>
           </Badge>
           <Badge
@@ -118,11 +106,11 @@ export default function Navbar() {
             className="badge"
           >
             <Link to="/CartPage" className="icon">
-              <ShoppingCartOutlined />
+              <ShoppingCartIcon />
             </Link>
           </Badge>
         </div>
-      ) :   null}
+      ) : null}
     </div>
   );
 }

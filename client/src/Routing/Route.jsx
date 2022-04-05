@@ -12,9 +12,8 @@ import KidsShoes from "../components/Pages/Shoes/KidsShoes";
 import WomensShoes from "../components/Pages/Shoes/WomensShoes";
 import KidsShirts from "../components/Pages/Shirts/KidsShirts";
 import WomensShirts from "../components/Pages/Shirts/WomensShirts";
-import Login from "../components/Pages/Login/Login";
-import Registration from "../components/Pages/Registration/Registration";
-import ForgotPassword from "../components/Pages/ForgotPassword/ForgotPassword";
+import LoginForm from '../components/Pages/Authentication-Pages/LoginForm';
+import RegistrationForm from '../components/Pages/Authentication-Pages/Registration';
 import About from "../components/Pages/About/About";
 import kidsShoe from "../components/Pages/Products/kidsShoe";
 import Contact from "../components/Pages/Contact/Contact";
@@ -27,6 +26,7 @@ import Hats from "../components/Pages/Accessories/Hats";
 import Socks from "../components/Pages/Accessories/Socks";
 import Balls from "../components/Pages/Accessories/Balls";
 import Shirt from "../components/Pages/Products/Shirt";
+import RegistrasionForm from "../components/Pages/Authentication-Pages/Registration";
 
 export default function Routing() {
   return (
@@ -43,9 +43,8 @@ export default function Routing() {
       <Route path="/WomensShoes" component={WomensShoes}></Route>
       <Route path="/KidsShirts" component={KidsShirts}></Route>
       <Route path="/WomensShirts" component={WomensShirts}></Route>
-      <Route path="/Login" component={Login}></Route>
-      <Route path="/Registration" component={Registration}></Route>
-      <Route path="/ForgotPasssword" component={ForgotPassword}></Route>
+      <Route path="/Login" component={LoginForm}></Route>
+      <Route path="/Registration" component={RegistrasionForm}></Route>
       <Route path="/About" component={About}></Route>
       <Route path="/Contact" component={Contact}></Route>
       <Route path="/kidsShoe/:id" component={kidsShoe} />

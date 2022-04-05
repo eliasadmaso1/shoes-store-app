@@ -1,4 +1,5 @@
 import { getServerBaseUrl } from "./utils";
+import axios from "axios";
 
 const getCartProducts = async (userId) => {
   try {
@@ -17,6 +18,7 @@ const addProductToCart = async (productId, userId, size) => {
     headers: { "Content-Type": "application/json" },
   };
   try {
+    // return axios.post(`${getServerBaseUrl()}/cart/add-product`, { productId, userId, size });
     return fetch(`${getServerBaseUrl()}/cart/add-product`, options);
   } catch (error) {
     console.log(error);

@@ -18,10 +18,7 @@ export default function Kids() {
           <Link to="/KidsShirts">Shirts</Link>
         </button>
       </main>
-      <main>
-      <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1a4dcd34-1379-44cd-971e-fa2bacf10288/sportswear-club-older-pullover-hoodie-jKhSHs.png"/> 
-
-      </main>
+     
      
     
     </div>

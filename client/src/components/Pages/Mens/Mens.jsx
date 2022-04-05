@@ -14,10 +14,6 @@ export default function Mens() {
           <Link to="/MenShirts">Shirts</Link>
         </button>
       </main>
-      <main>
-      <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e4196ef2-5b39-4973-b4f0-280ee7e90123/dri-fit-sport-clash-training-t-shirt-HwcP6k.png"/> 
-
-      </main>
     </div>
   );
 }

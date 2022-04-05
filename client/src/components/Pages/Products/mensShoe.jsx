@@ -27,6 +27,7 @@ const MensShoe = () => {
       const currectShoe = result.find((shoe) => {
         return shoe._id === id;
       });
+
       setProduct(currectShoe);
     });
   }, [id]);
@@ -61,7 +62,7 @@ const MensShoe = () => {
             </div>
             <div className="shoe-details">
               <h3>{product.category}</h3>
-             
+
               <h1>{product.name}</h1>
               <h4>{product.price}$</h4>
               <h4 style={{ color: "green" }}>{product.status}</h4>
@@ -94,7 +95,7 @@ const MensShoe = () => {
           </div>
         </div>
 
-        <h1 style={{marginLeft:"20px",marginTop:"50px",fontSize:"22px"}}>
+        <h1 style={{ marginLeft: "20px", marginTop: "50px", fontSize: "22px" }}>
           You Might Also Like
         </h1>
         <SliderComponent products={products} route="/mensShoe" />

@@ -19,10 +19,6 @@ export default function Womens() {
             <Link to="/WomensShirts">Shirts</Link>
           </button>
         </main>
-        <main>
-      <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/835db7ee-6784-42de-b4ad-00c7e944073a/dri-fit-one-graphic-training-tank-Ppf5dm.png"/> 
-
-      </main>
       </div>
     </>
   );

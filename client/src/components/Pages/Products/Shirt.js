@@ -17,8 +17,8 @@ export default function Shirt() {
   const [chosenSize, setChosenSize] = useState(null);
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
-  const [products, setProoducts] = useState([]);
   const { user, updateData } = useMyContext();
+  const [items,setItems] = useState([]);
 
   const toFavourites = async () => {
     if (user) {
@@ -39,10 +39,20 @@ export default function Shirt() {
 
   useEffect(() => {
     getShirts().then((result) => {
-      setProoducts(result);
       const currectAccessorie = result.find((product) => {
         return product._id === id;
       });
+      if(currectAccessorie){
+        const categoryItem  = currectAccessorie.category;
+        getShirts().then((res) => {
+          setItems(
+            res.filter((shirt) => {
+              return shirt.category === categoryItem;
+            })
+          );
+        });
+
+      }
       setShirt(currectAccessorie);
     });
   }, [id]);
@@ -87,7 +97,7 @@ export default function Shirt() {
               </>
               <p>{shirt.description}</p>
               <Link to="/">
-                <button className="backButton">Back To Shoes</button>
+                <button className="backButton">Back To Shirts</button>
               </Link>
             </div>
           </div>
@@ -96,7 +106,7 @@ export default function Shirt() {
         <h1 style={{ marginLeft: "20px", marginTop: "50px", fontSize: "22px" }}>
           You Might Also Like
         </h1>
-        <SliderComponent products={products} route="/Shirt" />
+        <SliderComponent products={items} route="/Shirt" />
       </>
     )
   );
