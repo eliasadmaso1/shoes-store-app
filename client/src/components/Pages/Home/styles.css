@@ -163,7 +163,6 @@
     }
     .content3 img:hover {
       opacity: 0.5;
-      width: 350px;
     }
     .shop-btn{
       visibility: hidden;

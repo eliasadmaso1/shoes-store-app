@@ -53,12 +53,15 @@ a{
   (min-width: 360px) and (max-width: 767px) {
       .contact-us{
           margin: 0px;
+          margin-top: 10px;
       }
       .services{
           margin: 0px;
+          margin-top: 10px;
       }
       .coming-soon{
           margin: 0px;
+          margin-top: 10px;
       }
       .footer-container{
           flex-direction: column;
