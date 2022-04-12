@@ -1,13 +1,42 @@
-.footerDiv{
-    height: 150px;
+
+.footer-container{
+    height: 500px;
     background-color: black;
+    margin: 5px;
     display: flex;
-    justify-content: flex-end;
+
+}
+
+.footer-container h3{
+    color: white;
+}
+.footer-container h4{
+    color: gray;
+}
+
+
+.contact-us{
+   
+    display: flex;
     align-items: center;
-    margin-right: 5px;
-    margin-left: 5px;
-    border: solid 5px white;
-    border-radius: 10px;
+    flex-direction: column;
+    margin: 40px;
+
+}
+
+.services{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px;
+
+}
+
+.coming-soon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px;
 
 }
 
@@ -16,22 +45,26 @@ a{
    
 }
 
-.subFooterDiv{
-    height: 100px;
-    background-color: black;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: 5px;
-    margin-left: 5px;
-    
+@media only screen and (min-width: 414px) and (max-width: 767px),
+  (min-width: 412px) and (max-width: 767px),
+  (min-width: 390px) and (max-width: 767px),
+  (min-width: 428px) and (max-width: 767px),
+  (min-width: 384px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 767px) {
+      .contact-us{
+          margin: 0px;
+      }
+      .services{
+          margin: 0px;
+      }
+      .coming-soon{
+          margin: 0px;
+      }
+      .footer-container{
+          flex-direction: column;
+          margin: 15px;
+      }
+  }
 
-}
-
-.subFooterDiv li{
-    margin-right: 10px;
-    color: gray;
-    list-style-type: none
-}
 
 
