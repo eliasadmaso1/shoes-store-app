@@ -3,40 +3,37 @@
     grid-template-columns: 1fr;
 }
 
-.kids-div main{
+.kids-div .background{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.kids-div main img{
-    width: 70vw;
-    height: 90vh;
+.kids-div .background img{
+    width: 50%;
+    height: 90%;
+}
 
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 
-.kids-div .shoes-btn{
-    position: absolute;
-    margin-top: 41%;
-    margin-right: 54%;
+.kids-div .buttons .btn{
+    margin-top: 20px;
     border-radius: 27px;
-    background: white;
+    background: black;
     width: 102px;
+    border: solid 2px black;
     height: 48px;
     font-size: 18px;
-    border: solid 0;
+    transition: 0.5s;
 }
 
-.kids-div .shirts-btn{
-    position: absolute;
-    margin-top: 41%;
-    margin-left: 45%;
-    border-radius: 27px;
-    background: white;
-    width: 102px;
-    height: 48px;
-    font-size: 18px;
-    border: solid 0;
+.kids-div .buttons .btn:hover{
+    opacity: 0.5;
 }
 
 @media only screen and (min-width: 414px) and (max-width: 767px),

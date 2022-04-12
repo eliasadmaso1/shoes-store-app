@@ -6,21 +6,20 @@ import "./kidsCss.css";
 export default function Kids() {
   return (
     <div className="kids-div">
-      <main>
-        <img
-          src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_786,c_limit/af5ee460-f507-46c7-8219-146242eae7e4/nike-kids.jpg"
-
-        />
-        <button className="shoes-btn">
-          <Link to="/KidsShoes">Shoes</Link>
-        </button>
-        <button className="shirts-btn">
-          <Link to="/KidsShirts">Shirts</Link>
-        </button>
-      </main>
-     
-     
+    <div className="buttons">
+     <button className="btn">
+       <Link to="/KidssShoes" style={{color:"white"}}>Shoes</Link>
+     </button>
+     <button className="btn">
+       <Link to="/KidssShirts" style={{color:"white"}}>Shirts</Link>
+     </button>
+     </div>
+   <div className="background">
+     <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_521,c_limit/414db494-7ebc-4d53-bbff-58d50b380a24/nike-just-do-it.png" />
+     </div>
     
-    </div>
+
+ 
+ </div>
   );
 }
