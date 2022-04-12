@@ -5,15 +5,20 @@ import "./mensCss.css";
 export default function Mens() {
   return (
     <div className="men-div">
-      <main>
-        <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_786,c_limit/e45fa8bd-6922-4b27-846b-6af3f2270962/men-s-shoes-clothing-accessories.jpg" />
-        <button className="shoes-btn">
-          <Link to="/MenShoes">Shoes</Link>
+       <div className="buttons">
+        <button className="btn">
+          <Link to="/MenShoes" style={{color:"white"}}>Shoes</Link>
         </button>
-        <button className="shirts-btn">
-          <Link to="/MenShirts">Shirts</Link>
+        <button className="btn">
+          <Link to="/MenShirts" style={{color:"white"}}>Shirts</Link>
         </button>
-      </main>
+        </div>
+      <div className="background">
+        <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_521,c_limit/0bafb728-2ae2-416f-bb18-5935801c8071/nike-just-do-it.png" />
+        </div>
+       
+   
+    
     </div>
   );
 }
