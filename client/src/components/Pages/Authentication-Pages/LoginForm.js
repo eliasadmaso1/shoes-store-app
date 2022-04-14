@@ -33,7 +33,8 @@ const LoginForm = () => {
   };
 
   return (
-    <div class="login-form">
+    <div className="login-form-container">
+        <div class="login-form">
       <div class="login-form__content">
         <div class="login-form__header">Login</div>
         <Input
@@ -60,12 +61,14 @@ const LoginForm = () => {
         />
         <div class="login-form__links">
           <Link to="/Registration" className="a">
-            Registration Here
+            Register Here
           </Link>
           
         </div>
       </div>
     </div>
+    </div>
+  
   );
 };
 

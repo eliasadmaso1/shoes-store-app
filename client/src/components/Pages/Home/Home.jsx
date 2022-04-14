@@ -1,11 +1,9 @@
 import "./styles.css";
 import nikeBack from "../../../images/logos/nikeWebBackground.jpeg";
 import { Link } from "react-router-dom";
-import Footer from "../../Feauters/Footer/Footer";
 import SliderComponent from "../../Feauters/Slider/Slider";
 import { getAllProducts } from "../../../Service/productService";
 import { useEffect, useState } from "react";
-import SubHeader from "../../Feauters/SubHeader/SubHeader";
 
 export default function Home() {
   const [products, setProducts] = useState([]);

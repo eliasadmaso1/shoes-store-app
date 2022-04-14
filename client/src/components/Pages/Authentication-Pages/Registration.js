@@ -2,10 +2,7 @@ import "./Form.css";
 import Input from "../../Feauters/Input/Input";
 import Button from "../../Feauters/Button/Button";
 import { useEffect, useState } from "react";
-import passwordValidator from "password-validator";
-import { pick } from "lodash";
 import { addUser } from "../../../Service/user-service";
-import LoginForm from "./LoginForm";
 import { useHistory } from "react-router-dom";
 
 const RegistrasionForm = () => {
@@ -34,7 +31,6 @@ const RegistrasionForm = () => {
       values.email,
       values.password
     );
-    console.log({ res });
     setMessageFromServer(res.data.message);
     if (res.data.success) {
       history.push("/Login");
@@ -42,10 +38,11 @@ const RegistrasionForm = () => {
   };
 
   return (
-    <>
+    <div className="login-form-container">
+
       <div class="login-form">
         <div class="login-form__content">
-          <div class="login-form__header">Registration</div>
+          <div class="login-form__header">Register With Us</div>
           <Input
             type="text"
             name="firstName"
@@ -79,7 +76,7 @@ const RegistrasionForm = () => {
 
           <Button
             className="form-button"
-            text="Registration"
+            text="Submit"
             onClick={register}
           />
           <div className="message-div">
@@ -88,7 +85,7 @@ const RegistrasionForm = () => {
           <div class="login-form__links"></div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

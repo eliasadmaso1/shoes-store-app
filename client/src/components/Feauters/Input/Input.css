@@ -10,7 +10,7 @@
 }
 
 .login-form__input:focus {
-  border-color: #e6bc98;
+  border-color: black;
 }
 
 .login-form__input::placeholder {
