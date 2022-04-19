@@ -76,67 +76,50 @@ export default function CartPage() {
             <Loader />
           </h2>
         ) : cartProducts.length === 0 && totalPrice === 0 ? (
-          <h3
-            style={{
-              marginTop: "15px",
-              marginRight: "2%",
-              fontWeight: "bold",
-              fontSize: "18px",
-            }}
-          >
-            There is no items in your bag
-          </h3>
+          <div className="items-message">          <h3>There is no items in your bag</h3>
+          </div>
         ) : (
-        
-                <div className="cart-products-div">
-                    <div className="payment">
-          <h3>Subtotal - ${subTotal}</h3>
-          <h3>Estimated Delivery - ${delivery_cost}</h3>
-          <h3>Total - ${subTotal + delivery_cost}</h3>
-          <Paypal />
-        </div>
-       
-                {cartProducts.map((product, index) => (
-                  <div>
-                    <Card
-                      isCart={true}
-                      product={product}
-                      index={index}
-                      remove={async () => {
-                        await deleteProductFromCart(
-                          product._id,
-                          user._id,
-                          product.size
-                        );
-                        await updateData();
-                      }}
-                      addOne={async () => {
-                        await addProductToCart(product._id, user._id, product.size);
-                        await updateData();
-                      }}
-                      removeOne={async () => {
-                        await decrementProductFromCart(product._id, user._id);
-                        await updateData();
-                      }}
-                    />
-                  </div>
-                ))}
+          <div className="cart-products-div">
+            <div className="payment">
+              <h3>Subtotal - ${subTotal}</h3>
+              <h3>Estimated Delivery - ${delivery_cost}</h3>
+              <h3>Total - ${subTotal + delivery_cost}</h3>
+              <Paypal />
+            </div>
+
+            {cartProducts.map((product, index) => (
+              <div>
+                <Card
+                  isCart={true}
+                  product={product}
+                  index={index}
+                  remove={async () => {
+                    await deleteProductFromCart(
+                      product._id,
+                      user._id,
+                      product.size
+                    );
+                    await updateData();
+                  }}
+                  addOne={async () => {
+                    await addProductToCart(product._id, user._id, product.size);
+                    await updateData();
+                  }}
+                  removeOne={async () => {
+                    await decrementProductFromCart(product._id, user._id);
+                    await updateData();
+                  }}
+                />
               </div>
-       
+            ))}
+          </div>
         )}
-
-
       </div>
       <div className="favourites-products-div">
-        <h2 >
-         
-          Favourites
-        </h2>
+        <h2>Favourites</h2>
         <div className="favourites-layout">
           {favourites.map((product, index) => (
-            <div
-              className="favourite-item"
-            >
+            <div className="favourite-item">
               <Link to={`/mensShoe/${product._id}`}>
                 <img src={product.images[0]} width="300" />
               </Link>
@@ -152,9 +135,7 @@ export default function CartPage() {
         </div>
       </div>
       <div className="also-like-div">
-        <h2 >
-          YOU MIGHT ALSO LIKE
-        </h2>
+        <h2>YOU MIGHT ALSO LIKE</h2>
         <div className="also-like-layout">
           <div className="img">
             <Link to="/MenShoes">
