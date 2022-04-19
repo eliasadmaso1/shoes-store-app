@@ -14,7 +14,7 @@ const getProductsInCart = async (req, res) => {
 
 const addProductToCart = async (req, res) => {
   try {
-    const filterById = { productId: req.body.productId ,userId: req.body.userId};
+    const filterById = { productId: req.body.productId ,userId: req.body.userId, size:req.body.size};
     const existingProduct = await cartModel.findOne(filterById);
     if (existingProduct) {
       const newQuantity = existingProduct.quantity + 1;
@@ -38,7 +38,7 @@ const addProductToCart = async (req, res) => {
 
 const deleteProductFromCart = async (req, res) => {
   try {
-    const filtered = { productId: req.body.productId,userId:req.body.userId };
+    const filtered = { productId: req.body.productId,userId:req.body.userId, size:req.body.size };
     await cartModel.findOneAndRemove(filtered, (err, result) => {
       if (err) throw err;
       res.json(result);

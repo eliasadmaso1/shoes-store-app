@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 const RegistrasionForm = () => {
   let history = useHistory();
   const [messageFromServer, setMessageFromServer] = useState("");
+  const [formErrors, setFormErrors] = useState({});
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
@@ -23,7 +24,27 @@ const RegistrasionForm = () => {
     });
   };
 
+  const validate = (values) => {
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+    const errors = {};
+    if (!values.userName) {
+      errors.userName = "User Name is required!";
+    }
+    if (!values.email) {
+      errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "Email is not valid!";
+    }
+    if (!values.password) {
+      errors.password = "Password is required!";
+    }
+    return errors;
+  };
+
   const register = async () => {
+    setFormErrors(validate(values));
+
     const res = await addUser(
       values.firstName,
       values.lastName,
@@ -39,7 +60,6 @@ const RegistrasionForm = () => {
 
   return (
     <div className="login-form-container">
-
       <div class="login-form">
         <div class="login-form__content">
           <div class="login-form__header">Register With Us</div>
@@ -61,24 +81,24 @@ const RegistrasionForm = () => {
             placeholder="User Name"
             handleChange={handleChange}
           />
+          <span>{formErrors.userName}</span>
           <Input
             type="email"
             name="email"
             placeholder="email"
             handleChange={handleChange}
           />
+          <span>{formErrors.email}</span>
+
           <Input
             type="password"
             name="password"
             placeholder="Password"
             handleChange={handleChange}
           />
+          <span>{formErrors.password}</span>
 
-          <Button
-            className="form-button"
-            text="Submit"
-            onClick={register}
-          />
+          <Button className="form-button" text="Submit" onClick={register} />
           <div className="message-div">
             <span>{messageFromServer}</span>
           </div>

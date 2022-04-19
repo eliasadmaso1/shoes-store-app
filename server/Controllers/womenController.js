@@ -18,7 +18,7 @@ async function getWomenShoes(req,res){
 async function postWomenShoes(req,res){
     try{
        
-        await womenShoesModel.insertMany( [req.body.shoe],(err,result)=>{
+        await womenShoesModel.insertMany( req.body,(err,result)=>{
             if (err) throw err;
             res.json(result);
         })
@@ -40,8 +40,23 @@ catch{
 }
 }
 
+async function updateWomenShoes(req,res){
+    let filter = {_id:req.body.id}
+    let update = {sizes:req.body.sizes}
+    try{
+      await womenShoesModel.updateOne(filter,update,(err,result)=>{
+        if(err) throw err;
+        res.json(result)
+      });
+    }
+    catch(e){
+      console.log(e);
+    }
+  }
+
 module.exports = {
     getWomenShoes,
     postWomenShoes,
-    deleteWomenShoes
+    deleteWomenShoes,
+    updateWomenShoes
 }
