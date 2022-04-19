@@ -32,7 +32,7 @@ export default function Home() {
         </Link>
         <Link to="/Kids">
           <div className="shop-div">
-          <button className="shop-btn">Men Shop</button>
+          <button className="shop-btn">Kids Shop</button>
 
           <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/d1915ba4-e40f-427d-9ad1-7d429cb40dce/sportswear-older-short-sleeve-top-PZKvvv.png" />
 
@@ -40,7 +40,7 @@ export default function Home() {
         </Link>
         <Link to="/Mens">
           <div className="shop-div">
-          <button className="shop-btn">Kids Shop</button>
+          <button className="shop-btn">Men Shop</button>
 
           <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/751b2bcd-b39b-487a-a670-6c780e7be4f5/sportswear-t-shirt-LJpTf2.png" />
 

@@ -106,7 +106,7 @@ export default function Shirt() {
         <h1 style={{ marginLeft: "20px", marginTop: "50px", fontSize: "22px" }}>
           You Might Also Like
         </h1>
-        <SliderComponent products={items} route="/Shirt" />
+        <SliderComponent products={items} route="/Shirt" link={true}/>
       </>
     )
   );

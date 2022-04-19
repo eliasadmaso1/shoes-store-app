@@ -51,7 +51,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-function SliderComponent({ products, route }) {
+function SliderComponent({ products, route,link }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -77,12 +77,15 @@ function SliderComponent({ products, route }) {
           {products.map((product) => {
             return (
               <div className="product-div">
-                <Link to={`${route}/${product._id}`}>
+                {link ? <Link to={`${route}/${product._id}`}>
                   <img src={product.images[0]} width="400" height="500" />
                   <p className="name">{product.name}</p>
                   <p className="price">{product.price}$</p>
                   <p className="category">{product.category}</p>
-                </Link>
+                </Link> :  <><img src={product.images[0]} width="400" height="500" />
+                  <p className="name">{product.name}</p>
+                  <p className="price">{product.price}$</p>
+                  <p className="category">{product.category}</p></>}
               </div>
             );
           })}

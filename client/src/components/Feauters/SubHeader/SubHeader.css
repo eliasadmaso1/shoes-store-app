@@ -1,7 +1,7 @@
 .header-div{
     background-color: rgb(240, 240, 240);
     display: grid;
-    grid-template-columns: 1.4fr 2fr 1.5fr;
+    grid-template-columns: 1.2fr 2fr 1.5fr;
     height: 50px;
     border-bottom: solid 2px rgba(0, 0, 0, 0.12);
 

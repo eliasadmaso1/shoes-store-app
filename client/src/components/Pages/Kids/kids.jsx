@@ -8,10 +8,10 @@ export default function Kids() {
     <div className="kids-div">
     <div className="buttons">
      <button className="btn">
-       <Link to="/KidssShoes" style={{color:"white"}}>Shoes</Link>
+       <Link to="/KidsShoes" style={{color:"white"}}>Shoes</Link>
      </button>
      <button className="btn">
-       <Link to="/KidssShirts" style={{color:"white"}}>Shirts</Link>
+       <Link to="/KidsShirts" style={{color:"white"}}>Shirts</Link>
      </button>
      </div>
    <div className="background">

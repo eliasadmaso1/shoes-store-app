@@ -96,7 +96,7 @@ const KidsShoe = () => {
         <h1 style={{ marginLeft: "20px", fontSize: "22px" }}>
           You Might Also Like
         </h1>
-        <SliderComponent products={products} route="/kidsShoe" />
+        <SliderComponent products={products} route="/kidsShoe" link={true}/>
       </>
     )
   );
