@@ -1,6 +1,8 @@
 .about-container{
     display: grid;
     grid-template-columns: 1fr;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .about-1{

@@ -3,6 +3,8 @@
   display: grid;
   grid-template-columns: 1.3fr 2fr 1.5fr;
   height: 80px;
+  font-family: 'Open Sans', sans-serif;
+
 
   
 }

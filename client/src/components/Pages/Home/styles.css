@@ -2,6 +2,8 @@
   .container {
     display: grid;
     grid-template-columns: 1fr;
+    font-family: 'Open Sans', sans-serif;
+
   }
   
   main {
@@ -78,7 +80,6 @@
   }
   .content3 img:hover {
     opacity: 0.5;
-    width: 1000px;
   }
 
   .content3 .accessories-shop-btn{

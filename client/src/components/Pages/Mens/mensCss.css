@@ -1,6 +1,9 @@
 .men-div{
     display: grid;
     grid-template-columns: 1fr;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+
 }
 
 .men-div .background{
@@ -19,6 +22,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
 
 
 .men-div .buttons .btn{
