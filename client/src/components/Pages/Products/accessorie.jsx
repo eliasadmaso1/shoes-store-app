@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { getAccessories } from "../../../Service/productService";
 import { addProductToCart } from "../../../Service/cart-service";
 import { addFavorite } from "../../../Service/favorites-service";
-import Footer from "../../Feauters/Footer/Footer";
 import { useMyContext } from "../../context";
 import { Link } from "react-router-dom";
 import SliderComponent from "../../Feauters/Slider/Slider";

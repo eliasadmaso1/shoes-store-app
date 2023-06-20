@@ -13,7 +13,6 @@ import WomensShoes from "../components/Pages/Shoes/WomensShoes";
 import KidsShirts from "../components/Pages/Shirts/KidsShirts";
 import WomensShirts from "../components/Pages/Shirts/WomensShirts";
 import LoginForm from '../components/Pages/Authentication-Pages/LoginForm';
-import RegistrationForm from '../components/Pages/Authentication-Pages/Registration';
 import About from "../components/Pages/About/About";
 import kidsShoe from "../components/Pages/Products/kidsShoe";
 import Contact from "../components/Pages/Contact/Contact";
