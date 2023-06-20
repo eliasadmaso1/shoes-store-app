@@ -8,12 +8,13 @@
 }
 .header-div .image-div{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
 }
 .header-div img{
     width: 35px;
+    margin-left: 17%;
 }
 
 .menu1{
