@@ -45,33 +45,6 @@ export default function Navbar() {
       <div className="logo">
         <img src={Nike} />
       </div>
-
-      <div className="menu">
-        <Link to="/" className="link">
-          Home
-        </Link>
-
-        <Link to="/Mens" className="link1">
-          Men
-        </Link>
-        <Link to="/Womens" className="link1">
-          Women
-        </Link>
-        <Link to="/Kids" className="link1">
-          Kids
-        </Link>
-        <Link to="/Accessories" className="link1">
-          Accessories
-        </Link>
-        <Link to="/Contact" className="link">
-          Contact
-        </Link>
-
-        <Link to="/About" className="link">
-          About
-        </Link>
-      </div>
-
       {user ? null : (
         <div className="icons">
           <Link to="/Login">

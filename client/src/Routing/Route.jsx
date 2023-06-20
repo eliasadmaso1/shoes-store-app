@@ -27,6 +27,7 @@ import Socks from "../components/Pages/Accessories/Socks";
 import Balls from "../components/Pages/Accessories/Balls";
 import Shirt from "../components/Pages/Products/Shirt";
 import RegistrasionForm from "../components/Pages/Authentication-Pages/Registration";
+import Jerseys from '../components/Pages/Jerseys/Jerseys';
 
 export default function Routing() {
   return (
@@ -57,6 +58,7 @@ export default function Routing() {
       <Route path="/Hats" component={Hats} />
       <Route path="/Socks" component={Socks} />
       <Route path="/Balls" component={Balls} />
+      <Route path="/Jerseys" component={Jerseys} />
     </Switch>
   );
 }

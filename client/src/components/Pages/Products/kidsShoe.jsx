@@ -48,6 +48,8 @@ const KidsShoe = () => {
     }
   };
 
+ 
+
   return (
     product && (
       <>
