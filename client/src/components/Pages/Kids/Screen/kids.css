@@ -1,39 +1,16 @@
-.kids-div{
+.Kids{
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.kids-div .background{
+.Kids .background{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.kids-div .background img{
-    width: 50%;
+.Kids .background img{
+    width: 70%;
     height: 90%;
-}
-
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-
-.kids-div .buttons .btn{
-    margin-top: 20px;
-    border-radius: 27px;
-    background: black;
-    width: 102px;
-    border: solid 2px black;
-    height: 48px;
-    font-size: 18px;
-    transition: 0.5s;
-}
-
-.kids-div .buttons .btn:hover{
-    opacity: 0.5;
 }
 
 @media only screen and (min-width: 414px) and (max-width: 767px),

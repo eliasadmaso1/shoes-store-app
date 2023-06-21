@@ -12,7 +12,7 @@
     align-items: center;
 }
 .Men .background img{
-    width: 80%;
+    width: 70%;
     height: 90%;
 }
 
@@ -39,60 +39,6 @@
 .Men .buttons .btn:hover{
     opacity: 0.5;
 }
-
-.Men .sale{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    margin: 50px;
-
-}
-.Men .sale img{
-    width: 30%;
-}
-
-.Men .shoes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    margin: 50px;
-
-}
-.Men .shoes img{
-    width: 30%;
-}
-
-.Men .clothing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    margin: 50px;
-
-}
-.Men .clothing img{
-    width: 30%;
-}
-
-.Men .trainning{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    margin: 50px;
-
-}
-
-.Men .trainning img{
-    width: 30%;
-}
-
-
-
-
-
 
 @media only screen and (min-width: 414px) and (max-width: 767px),
   (min-width: 412px) and (max-width: 767px),

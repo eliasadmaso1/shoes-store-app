@@ -1,15 +1,15 @@
-.women-div{
+.Women{
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.women-div .background{
+.Women .background{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.women-div .background img{
-    width: 50%;
+.Women .background img{
+    width: 70%;
     height: 90%;
 }
 
@@ -21,7 +21,7 @@
 }
 
 
-.women-div .buttons .btn{
+.Women .buttons .btn{
     margin-top: 20px;
     border-radius: 27px;
     background: black;
@@ -32,7 +32,7 @@
     transition: 0.5s;
 }
 
-.women-div .buttons .btn:hover{
+.Women .buttons .btn:hover{
     opacity: 0.5;
 }
 

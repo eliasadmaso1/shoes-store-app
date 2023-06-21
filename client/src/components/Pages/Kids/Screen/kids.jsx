@@ -1,24 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./kidsCss.css";
+import Navbar from "./Navbar/Navbar";
+import "./kids.css";
 
 export default function Kids() {
   return (
-    <div className="kids-div">
-    <div className="buttons">
-     <button className="btn">
-       <Link to="/KidsShoes" style={{color:"white"}}>Shoes</Link>
-     </button>
-     <button className="btn">
-       <Link to="/KidsShirts" style={{color:"white"}}>Shirts</Link>
-     </button>
-     </div>
+    <div className="Kids">
+    <Navbar/>
    <div className="background">
-     <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_521,c_limit/414db494-7ebc-4d53-bbff-58d50b380a24/nike-just-do-it.png" />
+     <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_786,c_limit/2cf49941-5051-4bfb-8907-435146cdb265/nike-kids.png" />
      </div>
-    
-
- 
- </div>
+  </div>
   );
 }

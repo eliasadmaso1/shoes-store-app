@@ -1,0 +1,18 @@
+.Men-Screen-Navbar{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 60px;
+    margin-top: 30px;
+}
+.title{
+    margin-left: 20%;
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+.links{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+
+}
