@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
-import { Grid } from "@material-ui/core";
-import "./styles.css";
-import Card from "../../Feauters/Cards/Cards";
-import { useState } from "react";
-import Select from "../../Feauters/Select";
-import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
-import { getServerBaseUrl } from "../../../Service/utils";
+import "./styles.css";
+import Card from "../../../Feauters/Cards/Cards";
+import { useState } from "react";
+import Select from "../../../Feauters/Select/Select";
+import TextField from "@material-ui/core/TextField";
+import { getServerBaseUrl } from "../../../../Service/utils";
 import { useMediaQuery } from 'react-responsive'
-import Footer from "../../Feauters/Footer/Footer";
-
 
 export default function Shoes() {
 
@@ -18,7 +15,7 @@ export default function Shoes() {
   const [Shoes, setShoes] = useState([]);
 
   useEffect(() => {
-    fetch(`${getServerBaseUrl()}/womens`)
+    fetch(`${getServerBaseUrl()}/kids`)
       .then((res) => res.json())
       .then((result) => setShoes(result));
   }, []);
@@ -72,7 +69,7 @@ export default function Shoes() {
     <div className="shoes-container">
       {filteredShoes.map((product) => (
        
-          <Link to={`/womenShoe/${product._id}`}>
+          <Link to={`/kidsShoe/${product._id}`}>
             {" "}
             <Card product={product} />
           </Link>

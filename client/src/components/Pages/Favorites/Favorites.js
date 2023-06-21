@@ -1,10 +1,9 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { getFavoritesProducts } from "../../../Service/favorites-service";
 import { getAllProducts } from "../../../Service/productService";
 import { useState, useEffect } from "react";
-import { useMyContext } from "../../context";
+import { useMyContext } from "../../../../src/Context/context";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { IconButton } from "@material-ui/core";
 import { deleteFavourite } from "../../../Service/favorites-service";

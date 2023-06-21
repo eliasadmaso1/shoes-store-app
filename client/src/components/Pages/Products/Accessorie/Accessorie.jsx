@@ -2,12 +2,12 @@ import React from "react";
 import "./products.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getAccessories } from "../../../Service/productService";
-import { addProductToCart } from "../../../Service/cart-service";
-import { addFavorite } from "../../../Service/favorites-service";
-import { useMyContext } from "../../context";
+import { getAccessories } from "../../../../Service/productService";
+import { addProductToCart } from "../../../../Service/cart-service";
+import { addFavorite } from "../../../../Service/favorites-service";
+import { useMyContext } from "../../../../Context/context";
 import { Link } from "react-router-dom";
-import SliderComponent from "../../Feauters/Slider/Slider";
+import SliderComponent from "../../../Feauters/Slider/Slider";
 
 const Accessorie = () => {
   const { id } = useParams();

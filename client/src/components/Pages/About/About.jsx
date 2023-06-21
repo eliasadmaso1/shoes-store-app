@@ -1,8 +1,8 @@
 import React from 'react';
 import './About.css';
-import Cart from '../../../images/logos/cart.png';
-import Favourites from '../../../images/logos/fav.png';
-import Auth from '../../../images/logos/auth.png';
+import Cart from '../../../images/cart.png';
+import Favourites from '../../../images/fav.png';
+import Auth from '../../../images/auth.png';
 
 
 

@@ -1,5 +1,5 @@
 import "./styles.css";
-import nikeBack from "../../../images/logos/nikeWebBackground.jpeg";
+import nikeBack from "../../../images/nikeWebBackground.jpeg";
 import { Link } from "react-router-dom";
 import SliderComponent from "../../Feauters/Slider/Slider";
 import { getAllProducts } from "../../../Service/productService";

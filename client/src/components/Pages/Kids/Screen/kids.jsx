@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../../Feauters/NavBar/Navbar";
 import "./kidsCss.css";
 
 export default function Kids() {

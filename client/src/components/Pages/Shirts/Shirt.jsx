@@ -5,10 +5,9 @@ import { useState, useEffect } from "react";
 import { getShirts } from "../../../Service/productService";
 import { addProductToCart } from "../../../Service/cart-service";
 import { addFavorite } from "../../../Service/favorites-service";
-import Footer from "../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
-import { useMyContext } from "../../context";
-import Select from "../../Feauters/Select";
+import { useMyContext } from "../../../Context/context";
+import Select from "../../Feauters/Select/Select";
 import SliderComponent from "../../Feauters/Slider/Slider";
 
 export default function Shirt() {

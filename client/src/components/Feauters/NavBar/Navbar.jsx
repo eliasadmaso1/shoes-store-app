@@ -2,11 +2,11 @@ import React from "react";
 import { Badge } from "@material-ui/core";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Nike from "../../../images/logos/nike.png";
+import Nike from "../../../images/nike.png";
 import { getCartProducts } from "../../../Service/cart-service";
 import { getFavoritesProducts } from "../../../Service/favorites-service";
 import { useState, useEffect } from "react";
-import { useMyContext } from "../../context";
+import { useMyContext } from "../../../Context/context";
 
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";

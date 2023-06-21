@@ -1,12 +1,10 @@
-import { Grid } from "@material-ui/core";
 import "./styles.css";
-import Card from "../../Feauters/Cards/Cards";
+import Card from "../../../Feauters/Cards/Cards";
 import { useState, useEffect } from "react";
-import Select from "../../Feauters/Select";
+import Select from "../../../Feauters/Select/Select";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
-import { getMenShoes } from "../../../Service/productService";
-import Footer from "../../Feauters/Footer/Footer";
+import { getMenShoes } from "../../../../Service/productService";
 
 export default function Shoes() {
   const [Shoes, setShoes] = useState([]);

@@ -2,35 +2,23 @@ import React from "react";
 import "./products.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getMenShoes } from "../../../Service/productService";
-import { addProductToCart } from "../../../Service/cart-service";
-import { addFavorite } from "../../../Service/favorites-service";
-import Footer from "../../Feauters/Footer/Footer";
+import { getWomenShoes } from "../../../../Service/productService";
+import { addProductToCart } from "../../../../Service/cart-service";
+import Footer from "../../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
-import { useMyContext } from "../../context";
-import Select from "../../Feauters/Select";
-import SliderComponent from "../../Feauters/Slider/Slider";
+import { useMyContext } from "../../../../Context/context";
+import Select from "../../../Feauters/Select/Select";
+import { addFavorite } from "../../../../Service/favorites-service";
+import SliderComponent from "../../../Feauters/Slider/Slider";
 
-const MensShoe = () => {
+const WomensShoe = () => {
   const { id } = useParams();
+  const { user, isUpdated, updateData } = useMyContext();
   const [product, setProduct] = useState(null);
-  const [products, setProducts] = useState([]);
+  const [chosenSize, setChosenSize] = useState(null);
   const [message, setMessage] = useState(null);
   const [message1, setMessage1] = useState(null);
-  const [chosenSize, setChosenSize] = useState(null);
-
-  const { user, isUpdated, updateData } = useMyContext();
-
-  useEffect(() => {
-    getMenShoes().then((result) => {
-      setProducts(result);
-      const currectShoe = result.find((shoe) => {
-        return shoe._id === id;
-      });
-
-      setProduct(currectShoe);
-    });
-  }, [id]);
+  const [products, setProducts] = useState([]);
 
   const toFavourites = async () => {
     if (user) {
@@ -49,6 +37,16 @@ const MensShoe = () => {
     }
   };
 
+  useEffect(() => {
+    getWomenShoes().then((result) => {
+      setProducts(result);
+      const currectShoe = result.find((shoe) => {
+        return shoe._id === id;
+      });
+      setProduct(currectShoe);
+    });
+  }, [id]);
+
   return (
     product && (
       <>
@@ -56,9 +54,7 @@ const MensShoe = () => {
           <div className="product-layout">
             <div className="shoe-images">
               <img className="img1" src={product.images[0]} width="500" />
-              <img className="img2" src={product.images[3]} width="500" />
-              <img className="img3" src={product.images[2]} width="500" />
-              <img className="img4" src={product.images[1]} width="500" />
+              <img className="img2" src={product.images[1]} width="500" />
             </div>
             <div className="shoe-details">
               <h3>{product.category}</h3>
@@ -71,7 +67,7 @@ const MensShoe = () => {
                   label="Size"
                   value={chosenSize}
                   setValue={setChosenSize}
-                  options={["42", "43", "44", "45", "46"]}
+                  options={["39", "40", "41", "42", "43"]}
                 />
 
                 <button className="addButton" onClick={addProduct}>
@@ -88,20 +84,20 @@ const MensShoe = () => {
                 </div>
               </>
               <p>{product.description}</p>
-              <Link to="/MenShoes">
+              <Link to="/WomensShoes">
                 <button className="backButton">Back To Shoes</button>
               </Link>
             </div>
           </div>
         </div>
 
-        <h1 style={{ marginLeft: "20px", marginTop: "50px", fontSize: "22px" }}>
+        <h1 style={{ marginLeft: "20px", fontSize: "22px" }}>
           You Might Also Like
         </h1>
-        <SliderComponent products={products} route="/mensShoe" link={true}/>
+        <SliderComponent products={products} route="/womenShoe" link={true}/>
       </>
     )
   );
 };
 
-export default MensShoe;
+export default WomensShoe;

@@ -1,7 +1,7 @@
-import Card from "../../Feauters/Cards/Cards";
+import Card from "../../../Feauters/Cards/Cards";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getAccessories } from "../../../Service/productService";
+import { getAccessories } from "../../../../Service/productService";
 import "./accessorie.css";
 
 export default function Bags() {

@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Route from "./Routing/Route";
-import { ContextProvider } from "./components/context";
+import { ContextProvider } from "../src/Context/context";
 import { useState, useEffect } from "react";
 import jwt from "jsonwebtoken";
 import Navbar from "./components/Feauters/NavBar/Navbar";

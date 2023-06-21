@@ -10,7 +10,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import useStyles from "./styles";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
-import { useMyContext } from "../../context";
+
 
 export default function CardComponent({
   product,

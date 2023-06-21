@@ -2,14 +2,14 @@ import React from "react";
 import "./products.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getKidsShoes } from "../../../Service/productService";
-import { addProductToCart } from "../../../Service/cart-service";
-import Footer from "../../Feauters/Footer/Footer";
+import { getKidsShoes } from "../../../../Service/productService";
+import { addProductToCart } from "../../../../Service/cart-service";
+import Footer from "../../../Feauters/Footer/Footer";
 import { Link } from "react-router-dom";
-import { useMyContext } from "../../context";
-import Select from "../../Feauters/Select";
-import { addFavorite } from "../../../Service/favorites-service";
-import SliderComponent from "../../Feauters/Slider/Slider";
+import { useMyContext } from "../../../../Context/context";
+import Select from "../../../Feauters/Select/Select";
+import { addFavorite } from "../../../../Service/favorites-service";
+import SliderComponent from "../../../Feauters/Slider/Slider";
 
 const KidsShoe = () => {
   const { id } = useParams();

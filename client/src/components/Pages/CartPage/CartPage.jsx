@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "../../Feauters/Cards/Cards";
 import { HeartFilled } from "@ant-design/icons";
-import { Grid } from "@material-ui/core";
 import {
   getCartProducts,
   addProductToCart,
@@ -14,10 +13,9 @@ import { getFavoritesProducts } from "../../../Service/favorites-service";
 import { useState, useEffect } from "react";
 
 import "./styles.css";
-import { useMyContext } from "../../context";
+import { useMyContext } from "../../../Context/context";
 import Paypal from "../Paypal/Paypal";
 import Loader from "../../Feauters/Loader/Loader";
-import Footer from "../../Feauters/Footer/Footer";
 
 export default function CartPage() {
   let delivery_cost = 40;

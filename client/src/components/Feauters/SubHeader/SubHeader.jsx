@@ -1,6 +1,6 @@
 import React from 'react';
 import './SubHeader.css';
-import jordan from '../../../images/logos/jordan.png';
+import jordan from '../../../images/jordan.png';
 import { Link } from "react-router-dom";
 
 

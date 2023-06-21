@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Select from "../../Feauters/Select";
+import Select from "../Select/Select";
 
 const Product = ({product}) => {
   const [chosenSize, setChosenSize] = useState(null);

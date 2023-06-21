@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
-import './accessories.css';
+import './Accessories.css';
 import { Button } from 'antd';
 import 'antd/dist/antd.css';
-import Navbar from "../../Feauters/NavBar/Navbar";
-
-
 
 export default function Accessories() {
-
-
 
   return (
   <div className="accessories">
