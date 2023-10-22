@@ -1,4 +1,4 @@
 export const getServerBaseUrl = () => 
-// "https://shoes-app-server.herokuapp.com"
-'http://localhost:8080'
+"https://nike-store-server.onrender.com"
+//'http://localhost:8080'
 

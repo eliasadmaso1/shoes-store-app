@@ -2,14 +2,14 @@ import "./styles.css";
 import nikeBack from "../../../images/nikeWebBackground.jpeg";
 import { Link } from "react-router-dom";
 import SliderComponent from "../../Feauters/Slider/Slider";
-import { getAllProducts } from "../../../Service/productService";
+import { getAllProducts,getMenShoes } from "../../../Service/productService";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
 
   useEffect(async () => {
-    await getAllProducts().then((res) => {
+    await getMenShoes().then((res) => {
       setProducts(res);
     });
   }, []);
@@ -19,6 +19,7 @@ export default function Home() {
   return (
     <div className="container">
       <main>
+        
         <img src={nikeBack} />
       </main>
 
@@ -26,6 +27,7 @@ export default function Home() {
         <Link to="/Womens">
           <div className="shop-div">
             <button className="shop-btn">Women Shop</button>
+            
           <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ce177064-ae79-49c7-a553-9229b09c2058/sportswear-oversized-funnel-neck-fleece-hoodie-211sK7.png" />
 
           </div>
@@ -59,6 +61,7 @@ export default function Home() {
 
         </Link>
       </div>
+
     </div>
   );
 }

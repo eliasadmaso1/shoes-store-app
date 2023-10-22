@@ -2,31 +2,32 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "../components/Pages/Home/Home";
 import Accessories from "../components/Pages/Accessories/Screen/Accessories";
-import MenShirts from "../components/Pages/Products/Shirt/Men";
-import CartPage from "../components/Pages/CartPage/CartPage";
-import MenShoes from "../components/Pages/Men/Shoes/MenShoes";
+import MenShirts from "../components/Pages/Men/Products/Clothing/Men";
+import CartPage from "../components/Pages/Cart/Cart";
+import MenShoes from "../components/Pages/Men/Products/Shoes/MenShoes";
 import Mens from "../components/Pages/Men/Screen/Men";
 import Womens from "../components/Pages/Women/Screen/Women";
 import Kids from "../components/Pages/Kids/Screen/Kids";
-import KidsShoes from "../components/Pages/Kids/Shoes/KidsShoes";
-import WomensShoes from "../components/Pages/Women/Shoes/WomensShoes";
-import KidsShirts from "../components/Pages/Shirts/Shirt";
-import WomensShirts from "../components/Pages/Products/Shirt/Women";
-import LoginForm from '../components/Pages/Authentication-Pages/LoginForm';
+import KidsShoes from "../components/Pages/Kids/Products/Shoes/KidsShoes";
+import WomensShoes from "../components/Pages/Women/Products/Shoes/WomensShoes";
+import KidsShirts from "../components/Pages/Kids/Products/Clothing/Kids";
+import WomensShirts from "../components/Pages/Women/Products/Clothing/Women";
+import LoginForm from '../components/Pages/Authentication/LoginForm';
 import About from "../components/Pages/About/About";
-import kidsShoe from "../components/Pages/Products/Shoe/Kids";
+import kidsShoe from "../components/Pages/Single-Product/Shoe/Kids";
 import Contact from "../components/Pages/Contact/Contact";
-import womenShoe from "../components/Pages/Products/Shoe/Women";
-import mensShoe from "../components/Pages/Products/Shoe/Men";
-import Favorites from "../components/Pages/Favorites/Favorites";
-import Accessorie from "../components/Pages/Products/Accessorie/Accessorie";
+import womenShoe from "../components/Pages/Single-Product/Shoe/Women";
+import mensShoe from "../components/Pages/Single-Product/Shoe/Men";
+import Favorites from "../components/Pages/Favourites/Favourites";
+import Accessorie from "../components/Pages/Single-Product/Accessorie/Accessorie";
 import Bags from "../components/Pages/Accessories/Products/Bags";
 import Hats from "../components/Pages/Accessories/Products/Hats";
 import Socks from "../components/Pages/Accessories/Products/Socks";
 import Balls from "../components/Pages/Accessories/Products/Balls";
-import Shirt from "../components/Pages/Shirts/Shirt";
-import RegistrasionForm from "../components/Pages/Authentication-Pages/Registration";
+import Shirt from "../components/Pages/Single-Product/Shirt/Shirt";
+import RegistrasionForm from "../components/Pages/Authentication/Registration";
 import Jerseys from '../components/Pages/Jerseys/Jerseys';
+import Card from '../components/Feauters/Card/Card';
 
 export default function Routing() {
   return (
@@ -58,6 +59,7 @@ export default function Routing() {
       <Route path="/Socks" component={Socks} />
       <Route path="/Balls" component={Balls} />
       <Route path="/Jerseys" component={Jerseys} />
+      <Route path="/card" component={Card} />
     </Switch>
   );
 }
